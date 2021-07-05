@@ -1,0 +1,132 @@
+footer {
+  width: 100%;
+  min-height: 754px;
+  background: #333333;
+  padding: 5rem 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  font-family: Microsoft YaHei;
+  color: #fff;
+
+  .bot-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+
+    ul {
+
+      &>* {
+        display: block;
+        margin: 0 1rem;
+      }
+      h4 {
+        font-size: 30px;
+        font-weight: bold;
+        line-height: 40px;
+      }
+      li {
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 31px;
+        margin: 1rem;
+      }
+    }
+  }
+
+  .bot-share {
+    padding: 5rem 3rem;
+    display: flex;
+    align-items: center;
+
+    img {
+      height: 35px;
+      margin-right: 1rem;
+      cursor: pointer;
+
+      &:nth-child(1) {
+        height: 50px;
+        margin-right: 5rem;
+        cursor: default;
+      }
+    }
+  }
+
+  .bot-contact {
+    padding: 0 3rem;
+
+    h3 {
+      font-size: 30px;
+      font-weight: bold;
+      padding-bottom: 10px;
+    }
+    p {
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 50px;
+    }
+
+    &>div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    input {
+      width: 100%;
+      margin: 1rem 0 3rem 0;
+      padding: 1rem 0;
+      appearance: none;
+      outline: none;
+      border: none;
+      background: none;
+      border-bottom: 4px solid #F3CF34;
+      font-size: 30px;
+      font-weight: bold;
+      line-height: 40px;
+      color: #F3CF34;
+    }
+
+    span {
+      font-size: 30px;
+      font-weight: bold;
+      line-height: 40px;
+    }
+
+    button {
+      width: 213px;
+      height: 48px;
+      border: 2px solid #F3CF34;
+      border-radius: 24px;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 31px;
+      color: #F3CF34;
+      background-color: transparent;
+      cursor: pointer;
+    }
+  }
+
+  .bot-term {
+    padding: 1rem 3rem;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 26px;
+    display: flex;
+    align-items: flex-end;
+  }
+  .bot-rights {
+    padding: 1rem 3rem;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 31px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+}
+
+
+// @media screen and (max-width: 350px) {
+
+
+// }
