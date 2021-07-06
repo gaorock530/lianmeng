@@ -3,10 +3,18 @@ footer {
   min-height: 754px;
   background: #333333;
   padding: 5rem 3rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+ 
   font-family: Microsoft YaHei;
   color: #fff;
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  }
+
+  .top-layer {
+    padding-bottom: 5rem;
+  }
 
   .bot-nav {
     display: flex;
