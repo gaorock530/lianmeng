@@ -8,6 +8,9 @@ import {
 import Header from './components/header';
 import Footer from './components/footer';
 import Home from './pages/home';
+import About from './pages/about';
+
+import Agreement from './pages/agreement';
 
 
 function App() {
@@ -16,8 +19,9 @@ function App() {
       <Router>
         <Header /> 
         <Switch>
-          <Route path="/about"><div>about</div></Route>
-          <Route path="/users"><div>users</div></Route>
+          <Route path="/about" strict><About /></Route>
+          <Route path="/users" strict><div>users</div></Route>
+          <Route path="/agreement" strict><Agreement/></Route>
           <Route path="/"><Home /></Route> 
         </Switch>
         <Footer/>

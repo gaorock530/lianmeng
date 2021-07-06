@@ -2,7 +2,7 @@ export default function Home () {
   return (
     <div className="homepage">
       <section className="sec-1">
-        <img className="home bg1" src="images/home_slices/Landing Background Logo R@2x.png" alt="" />
+        {/* <img className="home bg1" src="images/home_slices/Landing Background Logo R@2x.png" alt="" /> */}
         <p>An Investment Firm Focused On Empowering Blockchain And Web3.0.</p>
       </section>
       <section className="sec-2">

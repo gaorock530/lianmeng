@@ -6,15 +6,20 @@
   }
 
   .sec-1 {
+    height: 1079px;
+    background-image: url('../assets/images/home_slices/Landing\ Background\ Logo\ R@2x.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 
     p {
       position: absolute;
-      width: 1091px;
-      font-size: 60px;
+      width: 950px;
+      font-size: 50px;
       font-weight: bold;
       line-height: 100px;
       color: #333333;
-      bottom: 20%;
+      bottom: 10rem;
       left: 50%;
       transform: translateX(-50%);
       text-align: right;
@@ -25,15 +30,17 @@
         width: 48px;
         height: 48px;
         background: #FFD729;
-        left: 140px;
-        top: 30px;
+        left: 90px;
+        top: 26px;
       }
     }
   }
 
 
   .bg1 {
-    width: 100%;
+    width: 1920px;
+    object-position: center;
+    object-fit: contain;
   }
 
   .sec-2 {
@@ -53,7 +60,7 @@
       height: 193px;
       background: #1E4AFF;
       top: 4rem;
-      left: -8rem;
+      left: -10rem;
     }
 
     .city-text {
