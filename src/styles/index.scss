@@ -41,11 +41,17 @@ li {
   font-family: DINpro;
   src: url(../fonts/DINPro-Medium_13936.ttf);
 }
+@font-face {
+  font-family: Heiti SC;
+  src: url(../fonts/Heiti-SC-Light.ttf);
+}
 
 @import './header';
 @import './footer';
 
 @import './home';
 @import './about';
+@import './insight';
 @import './agreement';
-
+@import './blog';
+@import './press';

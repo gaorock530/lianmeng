@@ -110,3 +110,13 @@ header {
   }
 
 }
+
+@media screen and (max-width: 380px) {
+  header {
+    width: 100vw;
+
+    nav {
+      display: none;
+    }
+  }
+}

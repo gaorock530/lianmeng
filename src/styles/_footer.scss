@@ -46,16 +46,20 @@ footer {
     display: flex;
     align-items: center;
 
-    img {
+    a {
       height: 35px;
-      margin-right: 1rem;
       cursor: pointer;
+      padding: 0 0.5rem;
+    }
 
-      &:nth-child(1) {
-        height: 50px;
-        margin-right: 5rem;
-        cursor: default;
-      }
+    .logo {
+      height: 50px;
+      margin-right: 5rem;
+    }
+
+    img {
+      height: 100%;
+      object-fit: contain;
     }
   }
 
@@ -134,7 +138,10 @@ footer {
 }
 
 
-// @media screen and (max-width: 350px) {
-
-
-// }
+@media screen and (max-width: 380px) {
+  footer {
+    .bot-contact, .bot-term, bot-rights {
+      font-family: Heiti SC;
+    }
+  }
+}

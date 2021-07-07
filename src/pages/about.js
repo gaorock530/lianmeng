@@ -90,7 +90,7 @@ export default function About () {
         <h1>JOBS</h1>
         <div className="text">
           <p>If you consider yourself a passionate advocate of blockchain and Web3.0 who enjoys working in a challenging and dynamic atmosphere, we would love to hear from you. </p>
-          <p>Please contact us at: <span>hr@dfg.group</span></p>
+          <p>Please contact us at: <a href="mailto:hr@dfg.group">hr@dfg.group</a></p>
         </div>
         <div className="pic">
           <img src="images/about_slices/man-4749237_1920.png" alt="" />

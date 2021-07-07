@@ -28,14 +28,14 @@ export default function Footer () {
             </ul>
           </div>
           <div className="bot-share">
-            <img src="/images/home_slices/f-logo.png" alt="" />
-            <img src="/images/home_slices/f-logo1.png" alt="" />
-            <img src="/images/home_slices/f-logo2.png" alt="" />
-            <img src="/images/home_slices/f-logo3.png" alt="" />
-            <img src="/images/home_slices/f-logo4.png" alt="" />
+            <img src="/images/home_slices/f-logo.png" alt="" className="logo" />
+            <a href="https://twitter.com/DFG_OfficiaI" referrerPolicy="no-referrer" target="_blink" ><img src="/images/home_slices/f-logo1.png" alt="" /></a>
+            <a href="https://dfg-official.medium.com/" referrerPolicy="no-referrer" target="_blink" ><img src="/images/home_slices/f-logo2.png" alt="" /></a>
+            <a href="https://www.youtube.com/channel/UCaLymWUyQS7l3yUH1c-D-tA" referrerPolicy="no-referrer" target="_blink" ><img src="/images/home_slices/f-logo3.png" alt="" /></a>
+            <a href="https://www.linkedin.com/company/33517476" referrerPolicy="no-referrer" target="_blink" ><img src="/images/home_slices/f-logo4.png" alt="" /></a>
           </div>
         </div>
-        <div className="top-layer bot-contact">
+        <form className="top-layer bot-contact">
           <h3>CONTACT US</h3>
           <p>We are continuously on the lookout for refreshing ideas, business, and partnership opportunities. We invite you to contact us by submitting a business proposal and any resources that could help us to evaluate your application.</p>
           <input type="mail" name="mail" placeholder="example@email.com"/>
@@ -43,10 +43,10 @@ export default function Footer () {
             <span>Subscribe to our newsletter</span>
             <button>Subscribe</button>
           </div>
-        </div>
+        </form>
       </div>
       <div className="grid">
-        <div className="bot-term"><Link to="/">TERMS & CONDITIONS</Link>&nbsp;| PRIVACY POLICY</div>
+        <div className="bot-term"><Link to="/agreement">TERMS & CONDITIONS&nbsp;| PRIVACY POLICY</Link></div>
         <div className="bot-rights">©2019-2021 DFG. All rights reserved.</div>
       </div>
       

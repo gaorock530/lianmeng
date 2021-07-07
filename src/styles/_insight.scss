@@ -1,0 +1,261 @@
+.insightpage {
+  padding: 150px 0;
+
+  .arrows {
+    padding-top: 5rem;
+    text-align: center;
+
+    img {
+      margin: 0 2rem;
+      cursor: pointer;
+      user-select: none;
+    }
+  }
+
+  .sec-1 {
+    position: relative;
+    user-select: none;
+
+    ul {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 324px;
+
+      li {
+        display: block;
+        font-size: 60px;
+        font-weight: bold;
+        line-height: 80px;
+        color: #fff;
+        padding: 2rem 0;
+        cursor: pointer;
+
+        &.active {
+          color: #1E4AFF;
+        }
+      }
+    }
+  }
+
+  .sec-2 {
+
+    .title {
+      position: relative;
+      width: 246px;
+      height: 193px;
+      background: #1E4AFF;
+      
+      &:after {
+        content: 'BLOG';
+        position: absolute;
+        display: inline-block;
+        font-size: 100px;
+        font-weight: bold;
+        line-height: 133px;
+        color: #333333;
+        bottom: 0;
+        left: 326px;
+      }
+    }
+
+    ul {
+      display: block;
+      width: 90%;
+      max-width: 1660px;
+      margin: 8rem auto 0 auto;
+      border-top: 1px solid #707070;
+
+      li {
+        display: block;
+        padding: 2rem 0;
+        border-bottom: 1px solid #707070;
+
+        h4 {
+          font-size: 30px;
+          font-family: DINpro;
+          font-weight: 400;
+          line-height: 40px;
+          color: #B7B7B7;
+          padding: 1rem 0;
+        }
+
+        h1 {
+          font-size: 60px;
+          font-weight: 400;
+          line-height: 80px;
+          color: #333333;
+        }
+      }
+    }
+
+    
+  }
+
+
+  .sec-3 {    
+    padding-top: 10rem;
+
+    .title {
+      position: relative;
+      text-align: right;
+      
+
+      div {
+        display: inline-block;
+        width: 246px;
+        height: 193px;
+        background: #1E4AFF;
+        
+        &:before {
+          content: 'PRESS';
+          position: absolute;
+          display: inline-block;
+          font-size: 100px;
+          font-weight: bold;
+          line-height: 133px;
+          color: #333333;
+          bottom: 0;
+          right: 326px;
+        }
+      }
+
+    }
+
+    ul {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+      width: 90%;
+      max-width: 1660px;
+      margin: 5rem auto;
+      gap: 5rem;
+
+      li {
+
+        img {
+          width: 100%;
+          height: 434px;
+          border: 1px solid #707070;
+          object-fit: cover;
+        }
+
+        h2 {
+          -webkit-line-clamp: 2; // 用来限制在一个块元素显示的文本的行数
+          display: -webkit-box; // 将对象作为弹性伸缩盒模型显示
+          -webkit-box-orient: vertical; //设置或检查伸缩盒对象的子元素的排列方式
+          text-overflow: ellipsis; // 在多行文本的情况下，用...隐藏超出范围的文本
+          word-break: break-all;
+          overflow: hidden;
+          font-size: 40px;
+          font-weight: bold;
+          line-height: 60px;
+          color: #333333;
+        }
+
+        div {
+          position: relative;
+          display: flex;
+          align-items: center;
+          padding-top: 1rem;
+          margin-top: 1rem;
+          border-top: 1px solid #707070;
+          font-size: 40px;
+          font-family: DINpro;
+          font-weight: 400;
+          line-height: 53px;
+          color: #B7B7B7;
+
+          h5 {
+            font-weight: 400;
+          }
+
+          span {
+            flex: 1;
+            text-align: right;
+          }
+        }
+      }
+    }
+
+  }
+
+  .sec-4 {
+    padding-top: 20rem;
+
+    .title {
+      padding-bottom: 10rem;
+
+      div {
+        position: relative;
+        width: 246px;
+        height: 193px;
+        display: inline-block;
+        background: #1E4AFF;
+      }
+
+      span {
+        position: relative; 
+        font-size: 100px;
+        font-weight: bold;
+        line-height: 133px;
+        color: #333333;
+        bottom: 20px;
+        left: 78px; 
+      }
+    }
+
+    ul {
+      position: relative;
+      width: 1653px;
+      margin: 0 auto;
+
+      li {
+        width: 100%;
+        height: 442px;
+        background: #F8F8F8;
+        margin: 40px 0;
+        display: flex;
+
+        img {
+          width: 915px;
+          height: 100%;
+        }
+
+        div {
+          flex: 1;
+          padding: 3rem;
+          display: flex;
+          flex-direction: column;
+
+          h1 {
+            text-align: right;
+            font-size: 100px;
+            font-family: DINpro;
+            font-weight: 400;
+            line-height: 60px;
+            color: #333333;
+          }
+
+          h3 {
+            flex: 1;
+            text-align: right;
+            font-size: 40px;
+            font-family: DINpro;
+            font-weight: 400;
+            line-height: 60px;
+            color: #B7B7B7;
+            padding-top: 1rem;
+          }
+
+          p {
+            font-size: 40px;
+            font-weight: bold;
+            line-height: 60px;
+            color: #333333;
+          }
+
+        }
+      }
+    }
+  }
+}
