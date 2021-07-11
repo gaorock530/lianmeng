@@ -28,6 +28,8 @@ li {
   display: inline-block;
 }
 
+$header: 183px;
+
 @font-face {
   font-family: DINlight;
   src: url(../fonts/DINPro-Light_13935.ttf);
@@ -42,8 +44,8 @@ li {
   src: url(../fonts/DINPro-Medium_13936.ttf);
 }
 @font-face {
-  font-family: Heiti SC;
-  src: url(../fonts/Heiti-SC-Light.ttf);
+  font-family: futura;
+  src: url(../fonts/Futura.ttc);
 }
 
 @import './header';

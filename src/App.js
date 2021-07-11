@@ -17,21 +17,21 @@ import Agreement from './pages/agreement';
 
 function App() {
   return (
-    <div className="App">
-      <Router>
-        <Header /> 
-        <Switch>
-          <Route path="/about" strict><About /></Route>
-          <Route path="/insight" strict><Insight /></Route>
-          <Route path="/agreement" strict><Agreement/></Route>
-          <Route path="/blog/:id" strict><Blog/></Route>
-          <Route path="/press/:id" strict><Press/></Route>
+ 
+    <Router>
+      <Header /> 
+      <Switch>
+        <Route path="/about" strict><About /></Route>
+        <Route path="/insight" strict><Insight /></Route>
+        <Route path="/agreement" strict><Agreement/></Route>
+        <Route path="/blog/:id" strict><Blog/></Route>
+        <Route path="/press/:id" strict><Press/></Route>
 
-          <Route path="/"><Home /></Route> 
-        </Switch>
-        <Footer/>
-      </Router>
-    </div>
+        <Route path="/"><Home /></Route> 
+      </Switch>
+      <Footer/>
+    </Router>
+
   );
 }
 
