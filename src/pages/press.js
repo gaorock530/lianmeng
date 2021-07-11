@@ -2,10 +2,28 @@ import {Link} from 'react-router-dom';
 import { useEffect } from 'react';
 
 export default function Press () {
+
+  const title = encodeURI("DFG’s Exclusive $20 Million Polkadot Fund");
+  const url = encodeURI(window.location);
+
+  const add = () => {
+    if (window.sidebar && window.sidebar.addPanel) { // Mozilla Firefox Bookmark
+      window.sidebar.addPanel(document.title, window.location.href, '');
+    } else if (window.external && ('AddFavorite' in window.external)) { // IE Favorite
+      window.external.AddFavorite(window.location.href, document.title);
+    } else if (window.opera && window.print) { // Opera Hotlist
+      this.title = document.title;
+      return true;
+    } else { // webkit - safari/chrome
+      alert('Press ' + (navigator.userAgent.toLowerCase().indexOf('mac') !== -1 ? 'Command/Cmd' : 'CTRL') + ' + D to bookmark this page.');
+    }
+  }
+  
+
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
-
+  
   return (
     <div className="presspage">
       <section className="sec-1">
@@ -13,11 +31,11 @@ export default function Press () {
         <div className="subtitle">
           <h5>Effective Date: August 14, 2015</h5>
           <ul>
-            <li><img alt="" src="/images/press_slices/3560.png" /></li>
-            <li><img alt="" src="/images/press_slices/3563.png" /></li>
-            <li><img alt="" src="/images/press_slices/3564.png" /></li>
+            <li><a target="_blank" rel="noreferrer" href={`https://twitter.com/intent/tweet?text=${title}&url=${url}`}><img alt="" src="/images/press_slices/3560.png" /></a></li>
+            <li><a target="_blank" rel="noreferrer" href={`https://www.linkedin.com/sharing/share-offsite/?url=${url}`}><img alt="" src="/images/press_slices/3563.png" /></a></li>
+            <li><a target="_blank" rel="noreferrer" href={`http://www.facebook.com/sharer.php?u=${url}&p[title]=${title}`}><img alt="" src="/images/press_slices/3564.png" /></a></li>
             <li><img alt="" src="/images/press_slices/3567.png" /></li>
-            <li><img alt="" src="/images/press_slices/3605.png" /></li>
+            <li onClick={add}><img alt="" src="/images/press_slices/3605.png" /></li>
           </ul>
         </div>
         <p>These Terms of Service, together with our Privacy Policy, govern your access to and use of the websites (the “DCG Sites” or the “Sites”) of Digital Currency Group Inc. and those of its subsidiaries and affiliates, including Grayscale and Genesis (collectively, “DCG”, “Grayscale”, “Genesis”, “we”, “our”, or “us”), and your use of any of the services provided through these Sites. These Terms of Service and any additional terms and conditions, policies, agreements and disclosures to which you have agreed are hereafter referred to collectively as the “Agreement”. Please read these Terms of Service carefully. </p>

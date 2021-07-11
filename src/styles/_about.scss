@@ -1,83 +1,49 @@
 .aboutpage {
-  padding-top: $header;
 
   .sec-1 {
     position: relative;
     width: 100%;
-    height: 897px;
-    background-image: url('../assets/images/about_slices/141.png');
-    // background-position: center;
+    height: 1080px;
+    background-image: url('../assets/images/about/3616.png');
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 
-    &>div {
-      position: absolute;
-      right: 0;
-      padding: 5rem 8rem;
-      width: 90%;
-      max-width: 1613px;
-      height: 768px;
-      background-color: rgba(255,255,255,0.3);
-      overflow: hidden;
+    h1 {
+      padding: 329px 0 20px 0;
+      font-size: 100px;
+      font-family: Futura;
+      font-weight: bold;
+      line-height: 133px;
+      color: #122981;
+      text-align: center;
+      opacity: 0.23;
+    }
+    
 
-      h1 {
-        font-size: 100px;
-        font-weight: bold; 
-        line-height: 133px;
-      }
+    .para {
+      display: flex;
+      justify-content: space-between;
+
       p {
-        font-size: 30px;
-        font-family: DINpro;
+        max-width: 484px;
+        flex: 1;
+        font-size: 25px;
         font-weight: 400;
-        line-height: 60px;
+        line-height: 40px;
         color: #333333;
       }
     }
 
-    .para {
-      height: 350px;
-      overflow-y: hidden;
-    }
-
-    .points {
-      position: absolute;
-      right: 10rem;
-      bottom: 5rem;
-
-      li {
-        width: 23px;
-        height: 23px;
-        background: #fff;
-        border: 1px solid #707070;
-        border-radius: 50%;
-        margin-left: 2rem;
-        cursor: pointer;
-
-        &.active {
-          background: #1E4AFF;
-        }
-      }
-    }
   }
 
   .sec-2 {
     position: relative;
 
-    &:before {
-      content: '';
-      position: absolute;
-      width: 246px;
-      height: 193px;
-      background: #1E4AFF;
-      top: 50px;
-    }
-
 
     .ourteam {
       position: relative;
       padding: 5rem 0;
-      width: 1200px;
-      left: 20rem;
 
       h1 {
         font-size: 100px;
@@ -102,18 +68,13 @@
       margin-top: 10rem;
       width: 100%;
       height: 528px;
-      background: #F2F2F2;
-      box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.16);
 
       .content {
-        max-width: 1600px;
-        margin: 0 auto;
         display: flex;
 
         .pic {
           position: relative;
           flex: 1;
-          // top: -262px;
           bottom: 262px;
           object-fit: contain;
           width: 830px;
@@ -124,17 +85,6 @@
           position: relative;
           flex: 1;
           padding: 4rem 0;
-          
-
-
-          &:before {
-            content: '';
-            position: absolute;
-            width: 37px;
-            height: 99px;
-            background: #1E4AFF;
-            left: -60px;
-          }
 
           .upper {
             display: flex;
@@ -246,57 +196,50 @@
 
 
   .sec-4 {
-    position: relative;
-    width: 100%;
-    max-width: 1660px;
-    margin: 0 auto;
+    padding: 5rem 0;
 
-    h1 {
-      position: relative;
-      font-size: 100px;
-      font-weight: bold;
-      line-height: 133px;
-      color: #333333;
-      z-index: 2;
-    }
+    .right {
+      position: absolute;
+      top: 0;
+      right: 0;
 
-    .text {
-      position: relative;
-      margin: 2rem 0 20rem 0;
-      padding: 5rem 5rem 7rem 0;
-      width: 754px;
-      min-height: 299px;
-      font-size: 30px;
-      font-family: DINpro;
-      font-weight: 600;
-      line-height: 60px;
-      color: #333;
-      background-color: rgba(255,255,255,0.5);
-      z-index: 1;
-
-      a {
-        font-family: Microsoft YaHei;
-        font-size: 40px;
+      h1 {
+        position: relative;
+        font-size: 100px;
+        font-weight: bold;
+        line-height: 133px;
+        color: #333333;
+        z-index: 2;
+      }
+  
+      .text {
+        position: relative;
+        width: 1004px;
+        height: 496px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 103px;
+        font-size: 30px;
         font-weight: 400;
-        color: #1E4AFF;
+        line-height: 60px;
+        color: #333;
+        background-color: rgba(255,255,255,0.5);
+        z-index: 1;
+        text-align: left;
+
+        a {
+          font-size: 40px;
+          color: #122981;
+        }
       }
     }
+
+    
 
     .pic {
-      position: absolute;
-      top: 80px;
-      right: 0;
+      position: relative;
       z-index: 0;
-
-      &:before {
-        content: '';
-        position: absolute;
-        width: 246px;
-        height: 193px;
-        background: #1E4AFF;
-        top: -96.5px;
-        right: -120px;
-      }
 
       img {
         width: 1010px;
@@ -306,52 +249,5 @@
 
   }
 
-  .sec-5 {
-    position: relative;
-    width: 100%;
-    max-width: 1660px;
-    margin: 0 auto;
-    padding: 3rem 0 10rem 0;
-
-    &:before {
-      content: '';
-      position: absolute;
-      width: 246px;
-      height: 193px;
-      background: #1E4AFF;
-      top: -50px;
-      left: -120px;
-    }
-
-    div {
-      position: absolute;
-      top: 25%;
-      right: 13%;
-
-      h1 {
-        text-transform: uppercase;
-        font-size: 100px;
-        font-weight: bold;
-        line-height: 133px;
-        color: #333333;
-      }
-
-      P {
-        font-family: DINpro;
-        font-size: 30px;
-        line-height: 60px;
-        color: #333;
-
-        span, &:last-child {
-          font-size: 40px;
-          font-weight: bold;
-          color: #1E4AFF;
-        }
-
-      }
-
-    }
-
-  }
 
 }

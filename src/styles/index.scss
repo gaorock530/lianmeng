@@ -12,7 +12,10 @@ html {
 }
 
 body {
+  position: relative;
   overflow-x: hidden;
+  // max-width: 1920px;
+  // margin: 0 auto;
 }
 
 a {
@@ -28,7 +31,35 @@ li {
   display: inline-block;
 }
 
-$header: 183px;
+/*
+ 
+Common Classes
+
+*/
+
+.constained {
+  position: relative;
+  width: 100%;
+  max-width: 1680px;
+  margin: 0 auto;
+}
+
+/*
+ 
+CONSTs
+
+*/
+
+$header: 177px;
+
+
+
+/*
+ 
+FONTs
+
+*/
+
 
 @font-face {
   font-family: DINlight;
@@ -48,12 +79,25 @@ $header: 183px;
   src: url(../fonts/Futura.ttc);
 }
 
+/*
+ 
+Components
+
+*/
+
 @import './header';
 @import './footer';
+
+/*
+ 
+Pages
+
+*/
 
 @import './home';
 @import './about';
 @import './insight';
+@import './portfolio';
 @import './agreement';
 @import './blog';
 @import './press';

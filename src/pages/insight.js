@@ -1,6 +1,40 @@
+import { useEffect, useState } from 'react';
 import {Link} from 'react-router-dom';
 
+// const baseURL = 'https://api.dfg.group/v1/article/pageCmsArticle?pageNumber=';
+// const pageSize = 3;
+
+
+// async function request(lan, cate, page) {
+//   const url = `${baseURL}${page}&pageSize=${pageSize}&lang=${lan}_${cate}`
+//   console.log(url)
+//   return await fetch(url)
+// }
+
 export default function Insight () {
+
+  // const [blogPage, setBlogPage] = useState(1);
+  // const [blogs, setBlogs] = useState([]);
+  // const [pressPage, setPressPage] = useState(1);
+  // const [press, setPress] = useState([]);
+  // const [clubPage, setClubPage] = useState(1);
+  // const [clubs, setClubs] = useState([]);
+
+  
+  // useEffect(() => {
+  //   request('en', 'club', 1).then(res => {
+  //     console.log(res)
+  //   }).catch(e => console.warn(e))
+  //   request('en', 'press', 1).then(res => {
+  //     console.log(res)
+  //   }).catch(e => console.warn(e))
+  //   request('en', 'blog', 1).then(res => {
+  //     console.log(res)
+  //   }).catch(e => console.warn(e))
+  // }, [])
+
+
+
   return (
     <div className="insightpage">
       <section className="sec-1">

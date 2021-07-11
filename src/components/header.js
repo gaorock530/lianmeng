@@ -1,18 +1,19 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useContext } from 'react';
 import {Link, useLocation} from 'react-router-dom';
+import {ThemeContext, TOGGLE} from '../context/themeContext'
 
 const pages = [
-  {path: '/', name: 'Home'},
-  {path: '/portfolio', name: 'Portfolio'},
-  {path: '/insight', name: 'Insight'},
-  {path: '/about', name: 'About'}];
+  {path: '/', en: 'Home', zh: '首页'},
+  {path: '/portfolio', en: 'Portfolio', zh: '投资组合'},
+  {path: '/insight', en: 'Insight', zh: '行业洞察'},
+  {path: '/about', en: 'About', zh: '关于我们'}];
 
 const lan = {
   'en': {
     name: 'English',
     logo: 'l-1.png'
   },
-  'cn': {
+  'zh': {
     name: '中文', 
     logo: 'cn.png'
   }
@@ -20,6 +21,9 @@ const lan = {
 
 
 export default function Header () {
+  const [{language} , dispatch] = useContext(ThemeContext);
+  console.log({language})
+
   const {pathname} = useLocation();
   const miniNav = useRef(null);
   const otherLanguage = useRef(null);
@@ -39,6 +43,7 @@ export default function Header () {
   }
 
   const changeLanguage = () => {
+    dispatch({ type: TOGGLE })
     setCurrentLanguage(!currentLanguage)
   }
 
@@ -51,20 +56,17 @@ export default function Header () {
   const renderLi = () => pages.map(i => {
     const name = pathname.toLowerCase();
     const match = (name === i.path || name === i.path + '/');
-    return <li className={match?'active':null} key={i.name}><Link to={i.path}>{i.name}</Link></li>
+    return <li className={match?'active':null} key={i.en}><Link to={i.path}>{i[language]}</Link></li>
   })
 
   const RenderLanguage = () => {
-    let now = 'cn', then = 'en';
+    let now = 'zh', then = 'en';
     if (!currentLanguage) {
       now = 'en';
-      then = 'cn';
+      then = 'zh';
     }
-    console.log('change')
     const current = lan[now];
     const other = lan[then];
-
-    console.log({current, other})
 
     return (
       <li>
@@ -83,34 +85,37 @@ export default function Header () {
 
   return (
     <header>
-      <img className="logo" src="/images/home_slices/h-logo.png" alt=""/>
-      <div className="mini">
-        <svg xmlns="http://www.w3.org/2000/svg" width="21.361" height="21.357" viewBox="0 0 21.361 21.357">
-          <path id="路径_3566" data-name="路径 3566" fill="#999" d="M20.594,21.357a.763.763,0,0,1-.549-.229l-3.89-3.89-.137.114a9.793,9.793,0,1,1,1.335-1.335l-.114.137,3.89,3.89a.763.763,0,0,1-.534,1.312ZM9.787,1.527a8.237,8.237,0,1,0,8.237,8.229A8.237,8.237,0,0,0,9.787,1.527Z" transform="translate(0 0)"/>
-        </svg>
-        <img alt="" src="/images/menu.svg" onClick={onMiniMenuClick} />
-        <ul className="nav" ref={miniNav} onClick={onUlClick}>
-          {renderLi()}
-          <RenderLanguage />
-        </ul>
+      <div className="header-wrapper">
+        <img className="logo" src="/images/logo.9ee350c8.png" alt=""/>
+        <div className="mini">
+          <svg xmlns="http://www.w3.org/2000/svg" width="21.361" height="21.357" viewBox="0 0 21.361 21.357">
+            <path id="路径_3566" data-name="路径 3566" fill="#999" d="M20.594,21.357a.763.763,0,0,1-.549-.229l-3.89-3.89-.137.114a9.793,9.793,0,1,1,1.335-1.335l-.114.137,3.89,3.89a.763.763,0,0,1-.534,1.312ZM9.787,1.527a8.237,8.237,0,1,0,8.237,8.229A8.237,8.237,0,0,0,9.787,1.527Z" transform="translate(0 0)"/>
+          </svg>
+          <img alt="" src="/images/menu.svg" onClick={onMiniMenuClick} />
+          <ul className="nav" ref={miniNav} onClick={onUlClick}>
+            {renderLi()}
+            <RenderLanguage />
+          </ul>
+        </div>
+        <nav>
+          <ul>
+            {renderLi()}
+            <RenderLanguage />
+            {/* <div className="language">
+              <img className="flag" src="/images/home_slices/l-1.png" alt="" />
+              <span>English</span>
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg>
+            </div> */}
+            <div className="search">
+              <svg xmlns="http://www.w3.org/2000/svg" width="21.361" height="21.357" viewBox="0 0 21.361 21.357">
+                <path id="路径_3566" data-name="路径 3566" fill="#999" d="M20.594,21.357a.763.763,0,0,1-.549-.229l-3.89-3.89-.137.114a9.793,9.793,0,1,1,1.335-1.335l-.114.137,3.89,3.89a.763.763,0,0,1-.534,1.312ZM9.787,1.527a8.237,8.237,0,1,0,8.237,8.229A8.237,8.237,0,0,0,9.787,1.527Z" transform="translate(0 0)"/>
+              </svg>
+              <input type="text" name="searchText" maxLength={50} />
+            </div>
+          </ul>
+        </nav>
       </div>
-      <nav>
-        <ul>
-          {renderLi()}
-          <RenderLanguage />
-          {/* <div className="language">
-            <img className="flag" src="/images/home_slices/l-1.png" alt="" />
-            <span>English</span>
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg>
-          </div> */}
-          <div className="search">
-            <svg xmlns="http://www.w3.org/2000/svg" width="21.361" height="21.357" viewBox="0 0 21.361 21.357">
-              <path id="路径_3566" data-name="路径 3566" fill="#999" d="M20.594,21.357a.763.763,0,0,1-.549-.229l-3.89-3.89-.137.114a9.793,9.793,0,1,1,1.335-1.335l-.114.137,3.89,3.89a.763.763,0,0,1-.534,1.312ZM9.787,1.527a8.237,8.237,0,1,0,8.237,8.229A8.237,8.237,0,0,0,9.787,1.527Z" transform="translate(0 0)"/>
-            </svg>
-            <input type="text" name="searchText" maxLength={50} />
-          </div>
-        </ul>
-      </nav>
+     
     </header>
   )
 } 

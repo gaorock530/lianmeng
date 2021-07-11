@@ -1,7 +1,7 @@
 footer {
   width: 100%;
   min-height: 754px;
-  background: #333333;
+  background: #122981;
   padding: 5rem 3rem;
  
   font-family: Microsoft YaHei;
@@ -42,7 +42,7 @@ footer {
   }
 
   .bot-share {
-    padding: 5rem 3rem;
+    padding: 5rem 2rem;
     display: flex;
     align-items: center;
 
@@ -53,7 +53,7 @@ footer {
     }
 
     .logo {
-      height: 50px;
+      height: 104px;
       margin-right: 5rem;
     }
 
@@ -96,6 +96,7 @@ footer {
       font-weight: bold;
       line-height: 40px;
       color: #F3CF34;
+      text-align: right;
     }
 
     span {
