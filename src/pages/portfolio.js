@@ -64,29 +64,29 @@ export default function Portfolio () {
         </div>
         <div className="mid">
           <div className="limit logos">
-            <img alt="" src="/images/portfolio/1LedgerX.png" />
-            <img alt="" src="/images/portfolio/2ss.png" />
-            <img alt="" src="/images/portfolio/3Amber.png" />
-            <img alt="" src="/images/portfolio/4Black Type.png" />
+            <img alt="" src="/images/portfolio/11.png" />
+            <img alt="" src="/images/portfolio/12.png" />
+            <img alt="" src="/images/portfolio/13.png" />
+            <img alt="" src="/images/portfolio/14.png" />
           </div>
         </div>
         <div className="limit grid">
-          <li><img alt="" src="/images/portfolio/ripio.3e3f4633.png" /></li>
-          <li><img alt="" src="/images/portfolio/brave.58a4cee9.png" /></li>
-          <li><img alt="" src="/images/portfolio/24unocoin.1b3bacb4.png" /></li>
-          <li><img alt="" src="/images/portfolio/25centre.b8a412b2.png" /></li>
-          <li><img alt="" src="/images/portfolio/26creditDream.fc062d82.png" /></li>
-          <li><img alt="" src="/images/portfolio/27yours.bce17858.png" /></li>
-          <li><img alt="" src="/images/portfolio/28bloq.20adc02b.png" /></li>
-          <li><img alt="" src="/images/portfolio/29bitquery.7a40be13.png" /></li>
-          <li><img alt="" src="/images/portfolio/ripio.3e3f4633.png" /></li>
-          <li><img alt="" src="/images/portfolio/ripio.3e3f4633.png" /></li>
-          <li><img alt="" src="/images/portfolio/ripio.3e3f4633.png" /></li>
-          <li><img alt="" src="/images/portfolio/ripio.3e3f4633.png" /></li>
-          <li><img alt="" src="/images/portfolio/ripio.3e3f4633.png" /></li>
-          <li><img alt="" src="/images/portfolio/ripio.3e3f4633.png" /></li>
-          <li><img alt="" src="/images/portfolio/ripio.3e3f4633.png" /></li>
-          <li><img alt="" src="/images/portfolio/WeChat Image_20210203150632.png" style={{"height": "60%"}} /></li>
+          <li><img alt="" src="/images/portfolio/21.png" /></li>
+          <li><img alt="" src="/images/portfolio/22.png" /></li>
+          <li><img alt="" src="/images/portfolio/23.png" /></li>
+          <li><img alt="" src="/images/portfolio/24.png" /></li>
+          <li><img alt="" src="/images/portfolio/25.png" /></li>
+          <li><img alt="" src="/images/portfolio/31.png" /></li>
+          <li><img alt="" src="/images/portfolio/32.png" /></li>
+          <li><img alt="" src="/images/portfolio/33.png" /></li>
+          <li><img alt="" src="/images/portfolio/34.png" /></li>
+          <li><img alt="" src="/images/portfolio/35.png" /></li>
+          <li><img alt="" src="/images/portfolio/41.svg" /></li>
+          <li><img alt="" src="/images/portfolio/42.png" /></li>
+          <li><img alt="" src="/images/portfolio/43.png" /></li>
+          <li><img alt="" src="/images/portfolio/44.png" /></li>
+          <li><img alt="" src="/images/portfolio/45.png" /></li>
+          <li><img alt="" src="/images/portfolio/51.png" style={{"height": "60%"}} /></li>
 
         </div>
       </section>
@@ -99,38 +99,38 @@ export default function Portfolio () {
         </div>
         <div className="mid">
           <div className="limit logos">
-            <img alt="" src="/images/portfolio/Acala.png" />
-            <img alt="" src="/images/portfolio/2ss.png" />
-            <img alt="" src="/images/portfolio/Manta Website.png" />
-            <img alt="" src="/images/portfolio/Reef Finance Logo.png" />
+            <img alt="" src="/images/portfolio/61.png" />
+            <img alt="" src="/images/portfolio/62.png" />
+            <img alt="" src="/images/portfolio/63.png" />
+            <img alt="" src="/images/portfolio/64.png" />
           </div>
           <div className="limit logos">
-            <img alt="" src="/images/portfolio/HydraDX Website.png" />
-            <img alt="" src="/images/portfolio/Equilbrium.png" />
-            <img alt="" src="/images/portfolio/WechatIMG4024.png" />
-            <img alt="" src="/images/portfolio/121.png" />
+            <img alt="" src="/images/portfolio/71.png" />
+            <img alt="" src="/images/portfolio/72.png" />
+            <img alt="" src="/images/portfolio/73.png" />
+            <img alt="" src="/images/portfolio/74.png" />
           </div>
         </div>
         <div className="limit grid">
-          <li><img alt="" src="/images/portfolio/ripio.3e3f4633.png" /></li>
-          <li><img alt="" src="/images/portfolio/brave.58a4cee9.png" /></li>
-          <li><img alt="" src="/images/portfolio/24unocoin.1b3bacb4.png" /></li>
-          <li><img alt="" src="/images/portfolio/25centre.b8a412b2.png" /></li>
-          <li><img alt="" src="/images/portfolio/26creditDream.fc062d82.png" /></li>
-          <li><img alt="" src="/images/portfolio/27yours.bce17858.png" /></li>
-          <li><img alt="" src="/images/portfolio/28bloq.20adc02b.png" /></li>
-          <li><img alt="" src="/images/portfolio/29bitquery.7a40be13.png" /></li>
-          <li><img alt="" src="/images/portfolio/ripio.3e3f4633.png" /></li>
-          <li><img alt="" src="/images/portfolio/ripio.3e3f4633.png" /></li>
-          <li><img alt="" src="/images/portfolio/ripio.3e3f4633.png" /></li>
-          <li><img alt="" src="/images/portfolio/ripio.3e3f4633.png" /></li>
-          <li><img alt="" src="/images/portfolio/ripio.3e3f4633.png" /></li>
-          <li><img alt="" src="/images/portfolio/ripio.3e3f4633.png" /></li>
-          <li><img alt="" src="/images/portfolio/ripio.3e3f4633.png" /></li>
-          <li><img alt="" src="/images/portfolio/WeChat Image_20210203150632.png" style={{"height": "60%"}} /></li>
-          <li><img alt="" src="/images/portfolio/WeChat Image_20210203150632.png" style={{"height": "60%"}} /></li>
-          <li><img alt="" src="/images/portfolio/WeChat Image_20210203150632.png" style={{"height": "60%"}} /></li>
-          <li><img alt="" src="/images/portfolio/WeChat Image_20210203150632.png" style={{"height": "60%"}} /></li>
+          <li><img alt="" src="/images/portfolio/81.png" /></li>
+          <li><img alt="" src="/images/portfolio/82.png" /></li>
+          <li><img alt="" src="/images/portfolio/83.svg" /></li>
+          <li><img alt="" src="/images/portfolio/84.png" /></li>
+          <li><img alt="" src="/images/portfolio/85.png" /></li>
+          <li><img alt="" src="/images/portfolio/91.png" /></li>
+          <li><img alt="" src="/images/portfolio/92.png" /></li>
+          <li><img alt="" src="/images/portfolio/93.png" /></li>
+          <li><img alt="" src="/images/portfolio/94.png" /></li>
+          <li><img alt="" src="/images/portfolio/95.webp" /></li>
+          <li><img alt="" src="/images/portfolio/101.png" /></li>
+          <li><img alt="" src="/images/portfolio/102.png" style={{"height": "60%"}} /></li>
+          <li><img alt="" src="/images/portfolio/103.png" /></li>
+          <li><img alt="" src="/images/portfolio/104.png" /></li>
+          <li><img alt="" src="/images/portfolio/105.png" /></li>
+          <li><img alt="" src="/images/portfolio/111.png" /></li>
+          <li><img alt="" src="/images/portfolio/112.png" /></li>
+          <li><img alt="" src="/images/portfolio/113.png" /></li>
+          <li><img alt="" src="/images/portfolio/114.png" style={{"height": "60%"}} /></li>
 
         </div>
 
@@ -142,44 +142,45 @@ export default function Portfolio () {
         </div>
         <div className="mid">
           <div className="limit logos">
-            <img alt="" src="/images/portfolio/Acala.png" />
-            <img alt="" src="/images/portfolio/2ss.png" />
-            <img alt="" src="/images/portfolio/Manta Website.png" />
-            <img alt="" src="/images/portfolio/Reef Finance Logo.png" />
+            <img alt="" src="/images/portfolio/121.png" />
+            <img alt="" src="/images/portfolio/122.png" />
+            <img alt="" src="/images/portfolio/123.png" />
+            <img alt="" src="/images/portfolio/124.png" />
           </div>
           <div className="limit logos">
-            <img alt="" src="/images/portfolio/HydraDX Website.png" />
-            <img alt="" src="/images/portfolio/Equilbrium.png" />
-            <img alt="" src="/images/portfolio/WechatIMG4024.png" />
-            <img alt="" src="/images/portfolio/121.png" />
+            <img alt="" src="/images/portfolio/131.png" />
+            <img alt="" src="/images/portfolio/132.png" />
+            <img alt="" src="/images/portfolio/133.png" />
+            <img alt="" src="/images/portfolio/134.png" />
           </div>
         </div>
         <div className="limit grid">
-          <li><img alt="" src="/images/portfolio/ripio.3e3f4633.png" /></li>
-          <li><img alt="" src="/images/portfolio/brave.58a4cee9.png" /></li>
-          <li><img alt="" src="/images/portfolio/24unocoin.1b3bacb4.png" /></li>
-          <li><img alt="" src="/images/portfolio/25centre.b8a412b2.png" /></li>
-          <li><img alt="" src="/images/portfolio/26creditDream.fc062d82.png" /></li>
-          <li><img alt="" src="/images/portfolio/27yours.bce17858.png" /></li>
-          <li><img alt="" src="/images/portfolio/28bloq.20adc02b.png" /></li>
-          <li><img alt="" src="/images/portfolio/29bitquery.7a40be13.png" /></li>
-          <li><img alt="" src="/images/portfolio/ripio.3e3f4633.png" /></li>
-          <li><img alt="" src="/images/portfolio/ripio.3e3f4633.png" /></li>
-          <li><img alt="" src="/images/portfolio/ripio.3e3f4633.png" /></li>
-          <li><img alt="" src="/images/portfolio/ripio.3e3f4633.png" /></li>
-          <li><img alt="" src="/images/portfolio/ripio.3e3f4633.png" /></li>
-          <li><img alt="" src="/images/portfolio/ripio.3e3f4633.png" /></li>
-          <li><img alt="" src="/images/portfolio/ripio.3e3f4633.png" /></li>
-          <li><img alt="" src="/images/portfolio/WeChat Image_20210203150632.png" style={{"height": "60%"}} /></li>
-          <li><img alt="" src="/images/portfolio/WeChat Image_20210203150632.png" style={{"height": "60%"}} /></li>
-          <li><img alt="" src="/images/portfolio/WeChat Image_20210203150632.png" style={{"height": "60%"}} /></li>
-          <li><img alt="" src="/images/portfolio/WeChat Image_20210203150632.png" style={{"height": "60%"}} /></li>
-          <li><img alt="" src="/images/portfolio/ripio.3e3f4633.png" /></li>
-          <li><img alt="" src="/images/portfolio/ripio.3e3f4633.png" /></li>
-          <li><img alt="" src="/images/portfolio/ripio.3e3f4633.png" /></li>
-          <li><img alt="" src="/images/portfolio/ripio.3e3f4633.png" /></li>
-          <li><img alt="" src="/images/portfolio/ripio.3e3f4633.png" /></li>
-          <li><img alt="" src="/images/portfolio/ripio.3e3f4633.png" /></li>
+          <li><img alt="" src="/images/portfolio/141.png" style={{"height": "60%"}} /></li>
+          <li><img alt="" src="/images/portfolio/142.png" /></li>
+          <li><img alt="" src="/images/portfolio/143.png" /></li>
+          <li><img alt="" src="/images/portfolio/144.png" /></li>
+          <li><img alt="" src="/images/portfolio/145.png" /></li>
+          <li><img alt="" src="/images/portfolio/151.png" /></li>
+          <li><img alt="" src="/images/portfolio/152.png" /></li>
+          <li><img alt="" src="/images/portfolio/153.svg" /></li>
+          <li><img alt="" src="/images/portfolio/154.png" /></li>
+          <li><img alt="" src="/images/portfolio/155.png" /></li>
+          <li><img alt="" src="/images/portfolio/161.png" /></li>
+          <li><img alt="" src="/images/portfolio/162.png" /></li>
+          <li><img alt="" src="/images/portfolio/163.svg" /></li>
+          <li><img alt="" src="/images/portfolio/164.jpg" /></li>
+          <li><img alt="" src="/images/portfolio/165.png" /></li>
+          <li><img alt="" src="/images/portfolio/171.svg" /></li>
+          <li><img alt="" src="/images/portfolio/172.png" /></li>
+          <li><img alt="" src="/images/portfolio/173.png" /></li>
+          <li><img alt="" src="/images/portfolio/174.svg" style={{"height": "60%"}} /></li>
+          <li><img alt="" src="/images/portfolio/175.png" /></li>
+          <li><img alt="" src="/images/portfolio/181.png" /></li>
+          <li><img alt="" src="/images/portfolio/182.svg" /></li>
+          <li><img alt="" src="/images/portfolio/183.png" /></li>
+          <li><img alt="" src="/images/portfolio/184.svg" /></li>
+          <li><img alt="" src="/images/portfolio/185.svg" style={{"height": "60%"}} /></li>
+
         </div>
 
       </section>

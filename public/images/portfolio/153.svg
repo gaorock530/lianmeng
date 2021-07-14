@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="260px" height="234px" viewBox="0 0 260 234" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Rectangle@1x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#9BA7FA" offset="0%"></stop>
+            <stop stop-color="#5B6FF6" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#3B53F4" offset="0%"></stop>
+            <stop stop-color="#1B37F2" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Logos" transform="translate(-766.000000, -525.000000)">
+            <g id="#2---Mark" transform="translate(766.000000, 165.000000)">
+                <g id="Logos" transform="translate(0.000000, 78.000000)">
+                    <g id="2" transform="translate(0.000000, 282.000000)">
+                        <g id="Bg"></g>
+                        <g id="Shapes" transform="translate(38.000000, 37.000000)">
+                            <g id="Group-3" transform="translate(0.000100, 0.998800)">
+                                <polygon id="Fill-15" fill="#9BAAFD" points="93.5303 162 187.0613 108 93.5303 54 0.0003 108"></polygon>
+                                <polygon id="Fill-16" fill="#5D74FA" points="93.5303 144 187.0613 90 93.5303 36 0.0003 90"></polygon>
+                                <polygon id="Fill-17" fill="#1B37F2" points="187.124 54 155.884 54 93.531 18 31.177 54 1.42108547e-14 54 1.42108547e-14 72 93.53 126 187.06 72 187.124 72"></polygon>
+                                <polygon id="Fill-18" fill="url(#linearGradient-1)" points="93.5303 108 187.0613 54 93.5303 0 0.0003 54"></polygon>
+                                <polygon id="Fill-19" fill="url(#linearGradient-2)" points="83.1382 42.0005 95.8882 49.3615 72.7452 48.0005 62.3532 54.0005 93.5302 72.0005 103.9222 66.0005 90.6922 58.3615 114.3152 60.0005 124.7072 54.0005 93.5302 36.0005"></polygon>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

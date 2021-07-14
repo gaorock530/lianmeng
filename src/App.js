@@ -4,18 +4,22 @@ import {
   Route
 } from "react-router-dom";
 
+import { lazy, Suspense } from "react";
+
 import {ThemeProvider} from './context/themeContext';
 
 import Header from './components/header';
 import Footer from './components/footer';
-import Home from './pages/home';
-import About from './pages/about';
-import Insight from './pages/insight';
-import Portfolio from './pages/portfolio';
+import Loading from './components/loading';
 
-import Blog from './pages/blog';
-import Press from './pages/press';
-import Agreement from './pages/agreement';
+const Home = lazy(() => import('./pages/home'));
+const About = lazy(() => import('./pages/about'));
+const Insight = lazy(() => import('./pages/insight'));
+const Portfolio = lazy(() => import('./pages/portfolio'));
+
+const Blog = lazy(() => import('./pages/blog'));
+const Press = lazy(() => import('./pages/press'));
+const Agreement = lazy(() => import('./pages/agreement'));
 
 
 function App() {
@@ -24,14 +28,18 @@ function App() {
       <Router>
         <Header /> 
         <Switch>
-          <Route path="/about" strict><About /></Route>
-          <Route path="/insight" strict><Insight /></Route>
-          <Route path="/portfolio" strict><Portfolio /></Route>
-          <Route path="/agreement" strict><Agreement/></Route>
-          <Route path="/blog/:id" strict><Blog/></Route>
-          <Route path="/press/:id" strict><Press/></Route>
+          <Suspense fallback={() => <Loading />}>
+            
+            <Route path="/about" strict exact><About /></Route>
+            <Route path="/insight" strict exact><Insight /></Route>
+            <Route path="/portfolio" strict exact><Portfolio /></Route>
+            <Route path="/agreement" strict exact><Agreement/></Route>
+            <Route path="/blog/:id" strict><Blog/></Route>
+            <Route path="/press/:id" strict><Press/></Route>
 
-          <Route path="/"><Home /></Route> 
+            <Route path="/" exact><Home /></Route> 
+          </Suspense>
+          
         </Switch>
         <Footer/>
       </Router>
