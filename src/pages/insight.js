@@ -19,7 +19,13 @@ export default function Insight () {
   // const [press, setPress] = useState([]);
   // const [clubPage, setClubPage] = useState(1);
   // const [clubs, setClubs] = useState([]);
-
+  useEffect(() => {
+    const tag = window.location.hash;
+    if (!tag) return;
+    const div = document.querySelector(`${tag}`)
+    const offset = div.getBoundingClientRect();
+    window.scrollTo(0, offset.top);
+  }, [])
   
   // useEffect(() => {
   //   request('en', 'club', 1).then(res => {
@@ -46,7 +52,7 @@ export default function Insight () {
         </ul>
       </section>
       <section className="sec-2">
-        <div className="title" id="blog"></div>
+        <div className="title" id="blog">BLOG</div>
         <ul>
           <Link to="/blog/1">
             <li>
@@ -78,7 +84,7 @@ export default function Insight () {
         </div>
       </section>
       <section className="sec-3">
-        <div className="title" id="press"><div></div></div>
+        <div className="title" id="press">PRESS</div>
         <ul>
           <Link to="/press/1">
           <li>
@@ -127,10 +133,7 @@ export default function Insight () {
         </div>
       </section>
       <section className="sec-4"> 
-        <div className="title" id="club">
-          <div></div>
-          <span>DFG CLUB</span>
-        </div>
+        <div className="title" id="club">DFG CLUB</div>
         <ul>
           <li>
             <img alt="" src="images/insight_slices/1.png" />

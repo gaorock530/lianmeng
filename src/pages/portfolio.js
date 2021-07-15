@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import {ThemeContext} from '../context/themeContext'
 
 const content = {
@@ -42,8 +42,40 @@ const content = {
   },
 }
 
+const links = [
+  ['https://www.ledgerx.com/', 'https://www.circle.com/en/', 'https://www.ambergroup.io', 'https://www.matrix.co/'],
+  ['https://www.ripio.com/', 'https://brave.com/', 'https://www.unocoin.com/in', 'https://purse.io/shop', 'https://www.circle.com/en/'],
+  ['http://www.creditdream.co/', 'https://www.yours.org/', 'https://www.bloq.com/', 'https://bitquery.io/', 'https://titan.io/'],
+  ['https://bigtime.gg/', 'https://cryptoart.ai/', 'https://www.fvbank.us/#/home', 'https://chainsafe.io/', 'https://bitquery.io/'],
+  ['https://www.rsk.co/', '', '', '', ''],
+  
+  ['https://acala.network/', 'https://www.plasmnet.io/', 'https://manta.network/', 'https://reef.finance/', ''],
+  ['https://hydradx.io/', 'https://equilibrium.io/zh', 'https://usetech.com/', 'https://bit.country/', ''],
+  ['https://www.t3rn.io/', 'https://apron.pro/', 'https://efinity.io/', 'https://rmrk.app/', 'https://www.ternoa.com/'],
+  ['https://subquery.network/', 'https://zenlink.pro/zh/', 'https://standard.tech/', 'https://www.ethalend.org/', 'https://minterest.com/'],
+  ['https://www.konomi.network/', 'https://tidal.finance/', 'https://protocol.fractal.id/', 'http://parami.io/', 'https://integritee.network/'],
+  ['https://zcloak.network/', 'https://hackerlink.io/', 'https://www.subdao.network/', 'https://linktr.ee/zeitgeistpm', ''],
+  
+  ['https://solana.com/', 'https://near.org/', 'https://www.avalabs.org/', 'https://swarm.ethereum.org/', ''],
+  ['https://www.chia.net/', 'https://www.rendertoken.com/', 'https://www.nucypher.com/', 'https://daomaker.com/', ''],
+  ['https://bitcoin.org/en/', 'https://ethereum.org/en/', 'https://polkadot.network/', 'https://cosmos.network/', 'https://ethereumclassic.org/'],
+  ['https://pokt.network/', 'https://shyft.network/', 'https://nayms.io/', 'https://chainflip.io/', 'https://kine.io/'],
+  ['https://dinoswap.exchange/', 'https://zh.blockswap.network/', 'https://sienna.network/', 'https://meme.com/', 'http://corra.finance/'],
+  ['https://linktr.ee/doingud', 'http://starrynift.art/', 'https://metisdao.org/', 'https://www.pylons.tech/', 'https://www.daosquare.io/'],
+  ['https://deepdao.io/', 'https://republic.co/crypto', 'http://musenetwork.org/', 'https://www.alpha5.io/#/', 'https://mintable.app/'],
+]
+
 export default function Portfolio () {
   const [{language}] = useContext(ThemeContext);
+
+  useEffect(() => {
+    const tag = window.location.hash;
+    if (!tag) return;
+    const div = document.querySelector(`${tag}`)
+    const offset = div.getBoundingClientRect();
+    window.scrollTo(0, offset.top);
+  }, [])
+
   return (
     <div className="portfoliopage">
       <section className="sec-1">
@@ -57,40 +89,40 @@ export default function Portfolio () {
         
       </section>
 
-      <section className="sec-2">
+      <section className="sec-2" id="s1">
         <div className="small">
           <h1>{content.s2.title[language]}</h1>
           <p>{content.s2.p1[language]}</p>
         </div>
         <div className="mid">
           <div className="limit logos">
-            <img alt="" src="/images/portfolio/11.png" />
-            <img alt="" src="/images/portfolio/12.png" />
-            <img alt="" src="/images/portfolio/13.png" />
-            <img alt="" src="/images/portfolio/14.png" />
+            <a href={links[0][0]} target="_blink"><img alt="" src="/images/portfolio/11.png" /></a>
+            <a href={links[0][1]} target="_blink"><img alt="" src="/images/portfolio/12.png" /></a>
+            <a href={links[0][2]} target="_blink"><img alt="" src="/images/portfolio/13.png" /></a>
+            <a href={links[0][3]} target="_blink"><img alt="" src="/images/portfolio/14.png" /></a>
           </div>
         </div>
         <div className="limit grid">
-          <li><img alt="" src="/images/portfolio/21.png" /></li>
-          <li><img alt="" src="/images/portfolio/22.png" /></li>
-          <li><img alt="" src="/images/portfolio/23.png" /></li>
-          <li><img alt="" src="/images/portfolio/24.png" /></li>
-          <li><img alt="" src="/images/portfolio/25.png" /></li>
-          <li><img alt="" src="/images/portfolio/31.png" /></li>
-          <li><img alt="" src="/images/portfolio/32.png" /></li>
-          <li><img alt="" src="/images/portfolio/33.png" /></li>
-          <li><img alt="" src="/images/portfolio/34.png" /></li>
-          <li><img alt="" src="/images/portfolio/35.png" /></li>
-          <li><img alt="" src="/images/portfolio/41.svg" /></li>
-          <li><img alt="" src="/images/portfolio/42.png" /></li>
-          <li><img alt="" src="/images/portfolio/43.png" /></li>
-          <li><img alt="" src="/images/portfolio/44.png" /></li>
-          <li><img alt="" src="/images/portfolio/45.png" /></li>
-          <li><img alt="" src="/images/portfolio/51.png" style={{"height": "60%"}} /></li>
+          <li><a href={links[1][0]} target="_blink"><img alt="" src="/images/portfolio/21.png" /></a></li>
+          <li><a href={links[1][1]} target="_blink"><img alt="" src="/images/portfolio/22.png" /></a></li>
+          <li><a href={links[1][2]} target="_blink"><img alt="" src="/images/portfolio/23.png" /></a></li>
+          <li><a href={links[1][3]} target="_blink"><img alt="" src="/images/portfolio/24.png" /></a></li>
+          <li><a href={links[1][4]} target="_blink"><img alt="" src="/images/portfolio/25.png" /></a></li>
+          <li><a href={links[2][0]} target="_blink"><img alt="" src="/images/portfolio/31.png" /></a></li>
+          <li><a href={links[2][1]} target="_blink"><img alt="" src="/images/portfolio/32.png" /></a></li>
+          <li><a href={links[2][2]} target="_blink"><img alt="" src="/images/portfolio/33.png" /></a></li>
+          <li><a href={links[2][3]} target="_blink"><img alt="" src="/images/portfolio/34.png" /></a></li>
+          <li><a href={links[2][4]} target="_blink"><img alt="" src="/images/portfolio/35.png" /></a></li>
+          <li><a href={links[3][0]} target="_blink"><img alt="" src="/images/portfolio/41.svg" /></a></li>
+          <li><a href={links[3][1]} target="_blink"><img alt="" src="/images/portfolio/42.png" /></a></li>
+          <li><a href={links[3][2]} target="_blink"><img alt="" src="/images/portfolio/43.png" /></a></li>
+          <li><a href={links[3][3]} target="_blink"><img alt="" src="/images/portfolio/44.png" /></a></li>
+          <li><a href={links[3][4]} target="_blink"><img alt="" src="/images/portfolio/45.png" /></a></li>
+          <li><a href={links[4][0]} target="_blink"><img alt="" src="/images/portfolio/51.png" style={{"height": "60%"}} /></a></li>
 
         </div>
       </section>
-      <section className="sec-3">
+      <section className="sec-3" id="s2">
         <div className="small">
           <h1>{content.s3.title1[language]}</h1>
           <h1>{content.s3.title2[language]}</h1>
@@ -99,87 +131,87 @@ export default function Portfolio () {
         </div>
         <div className="mid">
           <div className="limit logos">
-            <img alt="" src="/images/portfolio/61.png" />
-            <img alt="" src="/images/portfolio/62.png" />
-            <img alt="" src="/images/portfolio/63.png" />
-            <img alt="" src="/images/portfolio/64.png" />
+            <a href={links[5][0]} target="_blink"><img alt="" src="/images/portfolio/61.png" /></a>
+            <a href={links[5][1]} target="_blink"><img alt="" src="/images/portfolio/62.png" /></a>
+            <a href={links[5][2]} target="_blink"><img alt="" src="/images/portfolio/63.png" /></a>
+            <a href={links[5][3]} target="_blink"><img alt="" src="/images/portfolio/64.png" /></a>
           </div>
           <div className="limit logos">
-            <img alt="" src="/images/portfolio/71.png" />
-            <img alt="" src="/images/portfolio/72.png" />
-            <img alt="" src="/images/portfolio/73.png" />
-            <img alt="" src="/images/portfolio/74.png" />
+            <a href={links[6][0]} target="_blink"><img alt="" src="/images/portfolio/71.png" /></a>
+            <a href={links[6][1]} target="_blink"><img alt="" src="/images/portfolio/72.png" /></a>
+            <a href={links[6][2]} target="_blink"><img alt="" src="/images/portfolio/73.png" /></a>
+            <a href={links[6][3]} target="_blink"><img alt="" src="/images/portfolio/74.png" /></a>
           </div>
         </div>
         <div className="limit grid">
-          <li><img alt="" src="/images/portfolio/81.png" /></li>
-          <li><img alt="" src="/images/portfolio/82.png" /></li>
-          <li><img alt="" src="/images/portfolio/83.svg" /></li>
-          <li><img alt="" src="/images/portfolio/84.png" /></li>
-          <li><img alt="" src="/images/portfolio/85.png" /></li>
-          <li><img alt="" src="/images/portfolio/91.png" /></li>
-          <li><img alt="" src="/images/portfolio/92.png" /></li>
-          <li><img alt="" src="/images/portfolio/93.png" /></li>
-          <li><img alt="" src="/images/portfolio/94.png" /></li>
-          <li><img alt="" src="/images/portfolio/95.webp" /></li>
-          <li><img alt="" src="/images/portfolio/101.png" /></li>
-          <li><img alt="" src="/images/portfolio/102.png" style={{"height": "60%"}} /></li>
-          <li><img alt="" src="/images/portfolio/103.png" /></li>
-          <li><img alt="" src="/images/portfolio/104.png" /></li>
-          <li><img alt="" src="/images/portfolio/105.png" /></li>
-          <li><img alt="" src="/images/portfolio/111.png" /></li>
-          <li><img alt="" src="/images/portfolio/112.png" /></li>
-          <li><img alt="" src="/images/portfolio/113.png" /></li>
-          <li><img alt="" src="/images/portfolio/114.png" style={{"height": "60%"}} /></li>
+          <li><a href={links[7][0]} target="_blink"><img alt="" src="/images/portfolio/81.png" /></a></li>
+          <li><a href={links[7][1]} target="_blink"><img alt="" src="/images/portfolio/82.png" /></a></li>
+          <li><a href={links[7][2]} target="_blink"><img alt="" src="/images/portfolio/83.svg" /></a></li>
+          <li><a href={links[7][3]} target="_blink"><img alt="" src="/images/portfolio/84.svg" /></a></li>
+          <li><a href={links[7][4]} target="_blink"><img alt="" src="/images/portfolio/85.png" /></a></li>
+          <li><a href={links[8][0]} target="_blink"><img alt="" src="/images/portfolio/91.png" /></a></li>
+          <li><a href={links[8][1]} target="_blink"><img alt="" src="/images/portfolio/92.png" /></a></li>
+          <li><a href={links[8][2]} target="_blink"><img alt="" src="/images/portfolio/93.png" /></a></li>
+          <li><a href={links[8][3]} target="_blink"><img alt="" src="/images/portfolio/94.png" /></a></li>
+          <li><a href={links[8][4]} target="_blink"><img alt="" src="/images/portfolio/95.webp" /></a></li>
+          <li><a href={links[9][0]} target="_blink"><img alt="" src="/images/portfolio/101.png" /></a></li>
+          <li><a href={links[9][1]} target="_blink"><img alt="" src="/images/portfolio/102.png" style={{"height": "60%"}} /></a></li>
+          <li><a href={links[9][2]} target="_blink"><img alt="" src="/images/portfolio/103.png" /></a></li>
+          <li><a href={links[9][3]} target="_blink"><img alt="" src="/images/portfolio/104.png" /></a></li>
+          <li><a href={links[9][4]} target="_blink"><img alt="" src="/images/portfolio/105.png" /></a></li>
+          <li><a href={links[10][0]} target="_blink"><img alt="" src="/images/portfolio/111.png" /></a></li>
+          <li><a href={links[10][1]} target="_blink"><img alt="" src="/images/portfolio/112.png" /></a></li>
+          <li><a href={links[10][2]} target="_blink"><img alt="" src="/images/portfolio/113.png" /></a></li>
+          <li><a href={links[10][3]} target="_blink"><img alt="" src="/images/portfolio/114.svg" style={{"height": "90px"}} /></a></li>
 
         </div>
 
       </section>
-      <section className="sec-4">
+      <section className="sec-4" id="s3">
         <div className="small">
           <h1>{content.s4.title[language]}</h1>
           <p>{content.s4.p1[language]}</p>
         </div>
         <div className="mid">
           <div className="limit logos">
-            <img alt="" src="/images/portfolio/121.png" />
-            <img alt="" src="/images/portfolio/122.png" />
-            <img alt="" src="/images/portfolio/123.png" />
-            <img alt="" src="/images/portfolio/124.png" />
+            <a href={links[11][0]} target="_blink"><img alt="" src="/images/portfolio/121.png" /></a>
+            <a href={links[11][1]} target="_blink"><img alt="" src="/images/portfolio/122.png" /></a>
+            <a href={links[11][2]} target="_blink"><img alt="" src="/images/portfolio/123.png" /></a>
+            <a href={links[11][3]} target="_blink"><img alt="" src="/images/portfolio/124.png" /></a>
           </div>
           <div className="limit logos">
-            <img alt="" src="/images/portfolio/131.png" />
-            <img alt="" src="/images/portfolio/132.png" />
-            <img alt="" src="/images/portfolio/133.png" />
-            <img alt="" src="/images/portfolio/134.png" />
+            <a href={links[12][0]} target="_blink"><img alt="" src="/images/portfolio/131.png" /></a>
+            <a href={links[12][1]} target="_blink"><img alt="" src="/images/portfolio/132.png" /></a>
+            <a href={links[12][2]} target="_blink"><img alt="" src="/images/portfolio/133.png" /></a>
+            <a href={links[12][3]} target="_blink"><img alt="" src="/images/portfolio/134.png" /></a>
           </div>
         </div>
         <div className="limit grid">
-          <li><img alt="" src="/images/portfolio/141.png" style={{"height": "60%"}} /></li>
-          <li><img alt="" src="/images/portfolio/142.png" /></li>
-          <li><img alt="" src="/images/portfolio/143.png" /></li>
-          <li><img alt="" src="/images/portfolio/144.png" /></li>
-          <li><img alt="" src="/images/portfolio/145.png" /></li>
-          <li><img alt="" src="/images/portfolio/151.png" /></li>
-          <li><img alt="" src="/images/portfolio/152.png" /></li>
-          <li><img alt="" src="/images/portfolio/153.svg" /></li>
-          <li><img alt="" src="/images/portfolio/154.png" /></li>
-          <li><img alt="" src="/images/portfolio/155.png" /></li>
-          <li><img alt="" src="/images/portfolio/161.png" /></li>
-          <li><img alt="" src="/images/portfolio/162.png" /></li>
-          <li><img alt="" src="/images/portfolio/163.svg" /></li>
-          <li><img alt="" src="/images/portfolio/164.jpg" /></li>
-          <li><img alt="" src="/images/portfolio/165.png" /></li>
-          <li><img alt="" src="/images/portfolio/171.svg" /></li>
-          <li><img alt="" src="/images/portfolio/172.png" /></li>
-          <li><img alt="" src="/images/portfolio/173.png" /></li>
-          <li><img alt="" src="/images/portfolio/174.svg" style={{"height": "60%"}} /></li>
-          <li><img alt="" src="/images/portfolio/175.png" /></li>
-          <li><img alt="" src="/images/portfolio/181.png" /></li>
-          <li><img alt="" src="/images/portfolio/182.svg" /></li>
-          <li><img alt="" src="/images/portfolio/183.png" /></li>
-          <li><img alt="" src="/images/portfolio/184.svg" /></li>
-          <li><img alt="" src="/images/portfolio/185.svg" style={{"height": "60%"}} /></li>
+          <li><a href={links[13][0]} target="_blink"><img alt="" src="/images/portfolio/141.svg" style={{"height": "60%"}} /></a></li>
+          <li><a href={links[13][1]} target="_blink"><img alt="" src="/images/portfolio/142.png" /></a></li>
+          <li><a href={links[13][2]} target="_blink"><img alt="" src="/images/portfolio/143.png" /></a></li>
+          <li><a href={links[13][3]} target="_blink"><img alt="" src="/images/portfolio/144.png" /></a></li>
+          <li><a href={links[13][4]} target="_blink"><img alt="" src="/images/portfolio/145.svg" /></a></li>
+          <li><a href={links[14][0]} target="_blink"><img alt="" src="/images/portfolio/151.png" /></a></li>
+          <li><a href={links[14][1]} target="_blink"><img alt="" src="/images/portfolio/152.png" /></a></li>
+          <li><a href={links[14][2]} target="_blink"><img alt="" src="/images/portfolio/153.svg" /></a></li>
+          <li><a href={links[14][3]} target="_blink"><img alt="" src="/images/portfolio/154.png" /></a></li>
+          <li><a href={links[14][4]} target="_blink"><img alt="" src="/images/portfolio/155.png" /></a></li>
+          <li><a href={links[15][0]} target="_blink"><img alt="" src="/images/portfolio/161.png" /></a></li>
+          <li><a href={links[15][1]} target="_blink"><img alt="" src="/images/portfolio/162.png" /></a></li>
+          <li><a href={links[15][2]} target="_blink"><img alt="" src="/images/portfolio/163.svg" /></a></li>
+          <li><a href={links[15][3]} target="_blink"><img alt="" src="/images/portfolio/164.jpg" /></a></li>
+          <li><a href={links[15][4]} target="_blink"><img alt="" src="/images/portfolio/165.png" /></a></li>
+          <li><a href={links[16][0]} target="_blink"><img alt="" src="/images/portfolio/171.svg" /></a></li>
+          <li><a href={links[16][1]} target="_blink"><img alt="" src="/images/portfolio/172.png" /></a></li>
+          <li><a href={links[16][2]} target="_blink"><img alt="" src="/images/portfolio/173.png" /></a></li>
+          <li><a href={links[16][3]} target="_blink"><img alt="" src="/images/portfolio/174.svg" style={{"height": "80px"}} /></a></li>
+          <li><a href={links[16][4]} target="_blink"><img alt="" src="/images/portfolio/175.svg" /></a></li>
+          <li><a href={links[17][0]} target="_blink"><img alt="" src="/images/portfolio/181.png" /></a></li>
+          <li><a href={links[17][1]} target="_blink"><img alt="" src="/images/portfolio/182.svg" /></a></li>
+          <li><a href={links[17][2]} target="_blink"><img alt="" src="/images/portfolio/183.svg" /></a></li>
+          <li><a href={links[17][3]} target="_blink"><img alt="" src="/images/portfolio/184.svg" /></a></li>
+          <li><a href={links[17][4]} target="_blink"><img alt="" src="/images/portfolio/185.svg" style={{"height": "60%"}} /></a></li>
 
         </div>
 

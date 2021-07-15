@@ -42,21 +42,14 @@
 
     .title {
       position: relative;
-      width: 246px;
-      height: 193px;
-      background: #1E4AFF;
-      
-      &:after {
-        content: 'BLOG';
-        position: absolute;
-        display: inline-block;
-        font-size: 100px;
-        font-weight: bold;
-        line-height: 133px;
-        color: #333333;
-        bottom: 0;
-        left: 326px;
-      }
+      font-size: 100px;
+      font-weight: bold;
+      line-height: 133px;
+      color: #333333;
+      width: 90%;
+      max-width: 1660px;
+      margin: 0 auto;
+      padding-top: 5rem;
     }
 
     ul {
@@ -99,27 +92,13 @@
     .title {
       position: relative;
       text-align: right;
-      
-
-      div {
-        display: inline-block;
-        width: 246px;
-        height: 193px;
-        background: #1E4AFF;
-        
-        &:before {
-          content: 'PRESS';
-          position: absolute;
-          display: inline-block;
-          font-size: 100px;
-          font-weight: bold;
-          line-height: 133px;
-          color: #333333;
-          bottom: 0;
-          right: 326px;
-        }
-      }
-
+      font-size: 100px;
+      font-weight: bold;
+      line-height: 133px;
+      color: #333333;
+      width: 90%;
+      max-width: 1660px;
+      margin: 0 auto;
     }
 
     ul {
@@ -183,25 +162,14 @@
     padding-top: 20rem;
 
     .title {
-      padding-bottom: 10rem;
-
-      div {
-        position: relative;
-        width: 246px;
-        height: 193px;
-        display: inline-block;
-        background: #1E4AFF;
-      }
-
-      span {
-        position: relative; 
-        font-size: 100px;
-        font-weight: bold;
-        line-height: 133px;
-        color: #333333;
-        bottom: 20px;
-        left: 78px; 
-      }
+      // padding-bottom: 10rem;
+      font-size: 100px;
+      font-weight: bold;
+      line-height: 133px;
+      color: #333333;
+      width: 90%;
+      max-width: 1660px;
+      margin: 0 auto;
     }
 
     ul {

@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import {ThemeContext} from '../context/themeContext'
 
 const content = {
@@ -93,6 +93,16 @@ const content = {
 
 export default function About () {
   const [{language}] = useContext(ThemeContext);
+
+  useEffect(() => {
+    const tag = window.location.hash;
+    if (!tag) return;
+    const div = document.querySelector(`${tag}`)
+    const offset = div.getBoundingClientRect();
+    window.scrollTo(0, offset.top);
+  }, [])
+
+
   return (
     <div className="aboutpage">
       <section className="sec-1">
@@ -105,7 +115,7 @@ export default function About () {
           </div>
         </div>
       </section>
-      <section className="constained sec-2">
+      <section className="constained sec-2" id="s1">
         <div className="ourteam">
           <h1>{content.s2.title[language]}</h1>
           <p>{content.s2.p1[language]}</p>
@@ -171,7 +181,7 @@ export default function About () {
           </div>
         </div>
       </section>
-      <section className="constained sec-4">
+      <section className="constained sec-4" id="s2">
         <div className="pic">
           <img src="/images/about/51miz-P1219990-PD72NRJ3-3840x2563.png" alt="" />
         </div>

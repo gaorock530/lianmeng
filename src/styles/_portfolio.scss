@@ -17,11 +17,12 @@
     background-image: url('../assets/images/portfolio/cartography-3244166_1280.png');
     width: 100%;
     height: 1080px;
+    background-position: center;
+    background-size: cover;
 
     
     
     &>div {
-      
       padding-top: 295px;
     }
 
@@ -121,6 +122,7 @@
           object-fit: contain;
           height: 100%;
           max-width: 226px;
+          width: 100%;
         }
       }
     }
@@ -198,6 +200,8 @@
           object-fit: contain;
           height: 100%;
           max-width: 226px;
+          width: 100%;  
+          max-height: 100px;
         }
       }
     }
@@ -264,8 +268,117 @@
           object-fit: contain;
           height: 100%;
           max-width: 226px;
+          width: 100%;  
+          max-height: 100px;
         }
       }
     }
+  }
+}
+
+
+@media screen and (max-width: 600px) { 
+  .portfoliopage {
+    .sec-1 {
+      min-height: 375px;
+      height: auto;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: top center;
+
+      &>div {
+        padding-top: 0;
+
+        &:nth-child(1) {
+          padding-top: 81px;
+        }
+      }
+
+      h1 {
+        padding: 0 1rem;
+        font-size: 28px;
+        font-family: Futura;
+        font-weight: bold;
+        line-height: 37px;
+      }
+
+      .para {
+        box-shadow: none;
+        padding: 0;
+        background: none;
+
+        p {
+          padding: 1rem;
+          font-size: 16px;
+          font-family: Heiti SC;
+          font-weight: 300;
+          line-height: 28px;
+        }
+      }
+    }
+
+    .sec-2, .sec-3, .sec-4 {
+      padding: 1rem;
+
+      &:after {
+        width: 127px;
+        height: 1px;
+      }
+
+      h1 {
+        font-size: 28px;
+        font-family: Futura;
+        font-weight: bold;
+        line-height: 37px;
+      }
+
+      p {
+        font-size: 16px;
+        font-family: Heiti SC;
+        font-weight: 300;
+        line-height: 28px;
+      }
+
+      .mid {
+        height: auto;
+        box-shadow: none;
+      }
+
+      .logos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+
+        a {
+          padding: 1rem;
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+
+        li {
+          width: 100%;
+          height: 57px;
+
+          a {
+            text-align: center;
+          }
+
+          img {
+            width: 90%;
+            max-width: 100px; 
+            max-height: 45px;
+          }
+        }
+
+      }
+    }
+
   }
 }

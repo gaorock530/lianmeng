@@ -44,7 +44,8 @@ export default function Header () {
 
   const changeLanguage = () => {
     dispatch({ type: TOGGLE })
-    setCurrentLanguage(!currentLanguage)
+    setCurrentLanguage(!currentLanguage);
+    miniNav.current.classList.remove('show')  
   }
 
   const openLanguage = () => {

@@ -2,12 +2,13 @@ footer {
   width: 100%;
   min-height: 754px;
   background: #122981;
-  padding: 5rem 3rem;
+  padding: 3rem;
  
   font-family: Microsoft YaHei;
   color: #fff;
 
   .grid {
+    padding: 3rem 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
   }
@@ -42,9 +43,11 @@ footer {
   }
 
   .bot-share {
-    padding: 5rem 2rem;
+    position: absolute;
+    padding: 2rem 3rem;
     display: flex;
     align-items: center;
+    top: 25rem;
 
     a {
       height: 35px;
@@ -53,7 +56,7 @@ footer {
     }
 
     .logo {
-      height: 104px;
+      height: 50px;
       margin-right: 5rem;
     }
 
@@ -139,10 +142,109 @@ footer {
 }
 
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 600px) {
   footer {
-    .bot-contact, .bot-term, bot-rights {
+    min-height: 300px;
+    padding: 1rem;
+
+    .grid {
+      display: block;
+      padding: 0;
+    }
+
+    .top-layer {
+      padding: 0;
+
+
+      .bot-share {
+        position: relative;
+        top: 0;
+        padding: 1rem 0;
+
+        .logo {
+          height: 38px;
+          margin-right: 1rem;
+        }
+
+      }
+    }
+
+    .bot-nav {
+      padding: 1rem 0 ;
+
+      ul {
+
+        &>* {
+          display: block;
+          margin: 0;  
+        }
+        h4 {
+          font-size: 16px;
+          font-family: Source Han Sans CN;
+          line-height: 28px;
+        }
+        li {
+          font-size: 14px;
+          font-family: Microsoft YaHei;
+          line-height: 20px;
+          margin: 1rem 0;
+        }
+      }
+    }
+
+    .bot-contact {
+      padding: 1rem 0;
+      margin-bottom: 2rem;
+
+      h3 {
+        font-size: 16px;
+        font-family: Heiti SC;
+        font-weight: 300;
+        line-height: 20px;
+      }
+
+      p {
+        font-size: 12px;
+        font-family: Heiti SC;
+        font-weight: 300;
+        line-height: 20px;
+      }
+
+      input {
+        margin: 1rem 0;
+        font-size: 14px;
+        font-family: Heiti SC;
+        font-weight: 300;
+        line-height: 17px;
+        border-width: 1px;
+      }
+
+      span {
+        font-size: 14px;
+        font-family: Heiti SC;
+        font-weight: 300;
+        line-height: 17px;
+      }
+
+      button {
+        font-size: 14px;
+        font-family: Heiti SC;
+        font-weight: 300;
+        line-height: 17px;
+        width: 99px;
+        height: 30px;
+        border: 1px solid #F3CF34;
+      }
+    }
+
+
+    .bot-contact, .bot-term, .bot-rights {
+      font-size: 12px;
       font-family: Heiti SC;
+      font-weight: 300;
+      line-height: 20px;
+      justify-content: center;
+      padding: 0;
     }
   }
 }

@@ -38,35 +38,36 @@ export default function Footer () {
       <div className="constained">
         <div className="grid">
           <div className="top-layer">
-            <div className="bot-nav">
-              <ul>
-                <h4>{content.h1.title[language]}</h4>
-                <li>{content.h1.l1[language]}</li>
-                <li>{content.h1.l2[language]}</li>
-                <li>{content.h1.l3[language]}</li>
-                <li>{content.h1.l4[language]}</li>
-              </ul>
-              <ul>
-                <h4>{content.h2.title[language]}</h4>
-                <li>{content.h2.l1[language]}</li>
-                <li>{content.h2.l2[language]}</li>
-                <li>{content.h2.l3[language]}</li>
-                <li>{content.h2.l4[language]}</li>
-              </ul>
-              <ul>
-                <h4>{content.h3.title[language]}</h4>
-                <li>{content.h3.l1[language]}</li>
-                <li>{content.h3.l2[language]}</li>
-                <li>{content.h3.l3[language]}</li>
-              </ul>
-            </div>
             <div className="bot-share">
-              <img src="/images/DFGwhite-02.png" alt="" className="logo" />
+              <img src="/images/DFGwhite-01.png" alt="" className="logo" />
               <a href="https://twitter.com/DFG_OfficiaI" referrerPolicy="no-referrer" target="_blink" ><img src="/images/home_slices/f-logo1.png" alt="" /></a>
               <a href="https://dfg-official.medium.com/" referrerPolicy="no-referrer" target="_blink" ><img src="/images/home_slices/f-logo2.png" alt="" /></a>
               <a href="https://www.youtube.com/channel/UCaLymWUyQS7l3yUH1c-D-tA" referrerPolicy="no-referrer" target="_blink" ><img src="/images/home_slices/f-logo3.png" alt="" /></a>
               <a href="https://www.linkedin.com/company/33517476" referrerPolicy="no-referrer" target="_blink" ><img src="/images/home_slices/f-logo4.png" alt="" /></a>
             </div>
+            <div className="bot-nav">
+              <ul>
+                <h4><Link to="/about">{content.h1.title[language]}</Link></h4>
+                <li><Link to="/about">{content.h1.l1[language]}</Link></li>
+                <li><a href="/about#s1">{content.h1.l2[language]}</a></li>
+                <li><a href="/about#s2">{content.h1.l3[language]}</a></li>
+                <li><a href="/about#s2">{content.h1.l4[language]}</a></li>
+              </ul>
+              <ul>
+                <h4><Link to="/portfolio">{content.h2.title[language]}</Link></h4>
+                <li><Link to="/portfolio">{content.h2.l1[language]}</Link></li>
+                <li><a href="/portfolio#s1">{content.h2.l2[language]}</a></li>
+                <li><a href="/portfolio#s2">{content.h2.l3[language]}</a></li>
+                <li><a href="/portfolio#s3">{content.h2.l4[language]}</a></li>
+              </ul>
+              <ul>
+                <h4><Link to="/insight">{content.h3.title[language]}</Link></h4>
+                <li><a href="/insight#blog">{content.h3.l1[language]}</a></li>
+                <li><a href="/insight#press">{content.h3.l2[language]}</a></li>
+                <li><a href="/insight#club">{content.h3.l3[language]}</a></li>
+              </ul>
+            </div>
+            
           </div>
           <form className="top-layer bot-contact">
             <h3>{content.contact.title[language]}</h3>

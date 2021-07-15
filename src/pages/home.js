@@ -75,8 +75,6 @@ export default function Home () {
             <h4>{content.h3.p3.title[language]}</h4>
             <p>{content.h3.p3.text[language]}</p>
           </li>
-
-         
         </ul>
         
         <img className="edge" src="images/home_slices/OUR EDGE@2x.png" alt="" />
@@ -85,9 +83,9 @@ export default function Home () {
         <div className="content">
           <h1>{content.h4.title[language]}</h1>
           <ul>
-            <li>{content.h4.p1[language]}</li>
-            <li>{content.h4.p2[language]}</li>
-            <li>{content.h4.p3[language]}</li>
+            <li><a href="/portfolio#s1">{content.h4.p1[language]}</a></li>
+            <li><a href="/portfolio#s2">{content.h4.p2[language]}</a></li>
+            <li><a href="/portfolio#s3">{content.h4.p3[language]}</a></li>
           </ul>
         </div>
       </section>

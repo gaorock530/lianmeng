@@ -28,7 +28,7 @@ function App() {
       <Router>
         <Header /> 
         <Switch>
-          <Suspense fallback={() => <Loading />}>
+          <Suspense fallback={<Loading />}>
             
             <Route path="/about" strict exact><About /></Route>
             <Route path="/insight" strict exact><Insight /></Route>
