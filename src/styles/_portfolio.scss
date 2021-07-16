@@ -318,7 +318,7 @@
     }
 
     .sec-2, .sec-3, .sec-4 {
-      padding: 1rem;
+      padding: 70px 1rem;
 
       &:after {
         width: 127px;
@@ -342,25 +342,30 @@
       .mid {
         height: auto;
         box-shadow: none;
+        padding: 1rem 0;
+
+        .logos {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          padding: 0;
+  
+          a {
+            padding: 1rem;
+          }
+  
+          img {
+            height:auto;
+            width: 100%;
+          }
+        }
       }
 
-      .logos {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        
-
-        a {
-          padding: 1rem;
-        }
-
-        img {
-          width: 100%;
-        }
-      }
+      
 
       .grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 18px;
+        padding: 0;
 
         li {
           width: 100%;

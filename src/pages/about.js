@@ -138,45 +138,56 @@ export default function About () {
       </section>
       <section className="sec-3">
         <div>
-          <img src="images/about_slices/CORE TEAM_MEMBERS.png" alt="" />
+          <img src="images/about_slices/CORE TEAM_MEMBERS.png" alt="" className="team"/>
         </div>
         <div className="staff">
           <img src="images/about_slices/30.png" alt="" />
           <div>
-            <h3>{content.s4.title1[language]}</h3>
-            <h4>{content.s4.title2[language]}</h4>
+            <div className="title">
+              <h3>{content.s4.title1[language]}</h3>
+              <h4>{content.s4.title2[language]}</h4>
+            </div>
+            
             <p>{content.s4.p1[language]}</p>
           </div>
         </div>
         <div className="staff">
           <img src="images/about_slices/29.png" alt="" />
           <div>
-            <h3>{content.s5.title1[language]}</h3>
-            <h4>{content.s5.title2[language]}</h4>
+            <div className="title">
+              <h3>{content.s5.title1[language]}</h3>
+              <h4>{content.s5.title2[language]}</h4>
+            </div>
             <p>{content.s5.p1[language]}</p>
           </div>
         </div>
         <div className="staff">
           <img src="images/about_slices/10.png" alt="" />
           <div>
-            <h3>{content.s6.title1[language]}</h3>
-            <h4>{content.s6.title2[language]}</h4>
+            <div className="title">
+              <h3>{content.s6.title1[language]}</h3>
+              <h4>{content.s6.title2[language]}</h4>
+            </div>
             <p>{content.s6.p1[language]}</p>
           </div>
         </div>
         <div className="staff">
           <img src="images/about_slices/11.png" alt="" />
           <div>
-            <h3>{content.s7.title1[language]}</h3>
-            <h4>{content.s7.title2[language]}</h4>
+            <div className="title">
+              <h3>{content.s7.title1[language]}</h3>
+              <h4>{content.s7.title2[language]}</h4>
+            </div>
             <p>{content.s7.p1[language]}</p>
           </div>
         </div>
         <div className="staff">
           <img src="images/about_slices/8.png" alt="" />
           <div>
-            <h3>{content.s8.title1[language]}</h3>
-            <h4>{content.s8.title2[language]}</h4>
+            <div className="title">
+              <h3>{content.s8.title1[language]}</h3>
+              <h4>{content.s8.title2[language]}</h4>
+            </div>
             <p>{content.s8.p1[language]}</p>
           </div>
         </div>

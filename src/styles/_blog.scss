@@ -3,6 +3,10 @@
   width: 1660px;
   margin: 0 auto;
 
+  .phone, .share {
+    display: none;
+  }
+
   h1 {
     font-size: 60px;
     font-weight: 400;
@@ -18,6 +22,10 @@
     color: #B7B7B7;
   }
 
+  h5 {
+    display: none;
+  }
+
   p {
     margin: 3rem 0;
     font-size: 30px;
@@ -25,5 +33,94 @@
     font-weight: 400;
     line-height: 40px;
     color: #333333;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .blogpage {
+    padding: 0 1rem ;
+    width: 100%;
+    background-image: url('../assets/images/weichat/city-336708_1920@2x.png');
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+
+    .phone {
+      display: flex;
+      width: 100%;
+      padding: 68px 0;
+      align-items: center;
+      justify-content: center;
+      font-size: 35px;
+      font-weight: bold;
+      line-height: 38px;
+      color: #313131;
+
+      img {
+        width: 114px;
+        height: 56px;
+        object-fit: contain;
+        margin-right: 12px;
+      }
+    }
+
+    .bg {
+      background-color: #fff;
+      padding: 2rem 1rem;
+      border-radius: 2rem 0 0 0;
+    }
+
+    h1 {
+      font-size: 21px;
+      font-family: Futura;
+      font-weight: bold;
+      line-height: 28px;
+    }
+
+    h5 {
+      display: block;
+      font-size: 12px;
+      font-family: Heiti SC;
+      font-weight: 300;
+      line-height: 14px;
+      color: #B7B7B7;
+      padding-bottom: 1rem;
+    }
+  
+    h4 {
+      display: none;
+    }
+  
+    p {
+      margin: 0;
+      padding: 1rem 0;
+      font-size: 15px;
+      font-family: Heiti SC;
+      font-weight: 300;
+      line-height: 28px;
+    }
+
+    .share {
+      display: flex;
+      padding: 1rem;
+      padding-bottom: 5rem;
+      align-items: flex-end;
+
+      p {
+        padding: 0;
+        font-size: 14px;
+        font-family: Cardiff;
+        font-weight: bold;
+        line-height: 20px;
+        color: #333333;
+      }
+
+      img {
+        width:75px;
+        height: 75px;
+        object-fit: contain;
+      }
+    }
   }
 }

@@ -58,7 +58,7 @@ export default function Insight () {
             <li>
               <h4>Mar 02, 2021</h4>
               <h1>DFG(数字金融集团)成为 Polkastarter 理事会成员</h1>
-              <h4>By: XXX</h4>
+              <h4 className="by">By: XXX</h4>
             </li>
           </Link>
           <Link to="/blog/2">
@@ -66,14 +66,14 @@ export default function Insight () {
               <h4>Mar 02, 2021</h4>
               <h1>Announcement: 
                   DFG’s Exclusive $20 Million Polkadot Fund</h1>
-              <h4>By: XXX</h4>
+              <h4 className="by">By: XXX</h4>
             </li>
           </Link>
           <Link to="/blog/3">
             <li>
               <h4>Mar 02, 2021</h4>
               <h1>DFG(数字金融集团)成为 Polkastarter 理事会成员</h1>
-              <h4>By: XXX</h4>
+              <h4 className="by">By: XXX</h4>
             </li>
           </Link>
           
@@ -89,7 +89,7 @@ export default function Insight () {
           <Link to="/press/1">
           <li>
             <img alt="" src="images/insight_slices/1.png" />
-            <h2>Announcement: DFG’s Exclusive $20 Million Polkadot Fund</h2>
+            <h2>Announcement: DFG’s Exclusive $20 Million asdaqwqeqwe Polkadot Fund</h2>
             <div>
               <h5>By XXXX</h5>
               <span>Feb 09, 2021</span>
@@ -137,26 +137,26 @@ export default function Insight () {
         <ul>
           <li>
             <img alt="" src="images/insight_slices/1.png" />
-            <div>
+            <div className="phone">
               <h1>03</h1>
               <h3>2021.xx.xx</h3>
-              <p>Announcement: DFG’s Exclusive $20 Million Polkadot Fund</p>
+              <p>Announcement: DFG’s Exclusive asdas qweqwe $20 Million Polkadot Fund</p>
             </div>
           </li>
           <li>
             <img alt="" src="images/insight_slices/DFGCLUBCOVER02.png" />
-            <div>
+            <div className="phone">
               <h1>02</h1>
               <h3>2021.xx.xx</h3>
-              <p>畅享Polkadot无尽想象</p>
+              <p>Announcement: DFG’s Exclusive asdas qweqwe $20 Million Polkadot Fund</p>
             </div>
           </li>
           <li>
             <img alt="" src="images/insight_slices/DFGCLUB02.png" />
-            <div>
+            <div className="phone">
               <h1>01</h1>
               <h3>2021.xx.xx</h3>
-              <p>浅谈波卡价值支持</p>
+              <p>Announcement: DFG’s Exclusive asdas qweqwe $20 Million Polkadot Fund</p>
             </div>
           </li>
         </ul>

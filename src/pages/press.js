@@ -49,7 +49,7 @@ export default function Press () {
 
       </section>
       <section className="sec-3">
-        <div className="title" id="press"><div></div></div>
+        <div className="title">PRESS</div>
         <ul>
           <Link to="/press/1">
           <li>

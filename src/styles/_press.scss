@@ -166,3 +166,160 @@
 
 
 }
+
+
+@media screen and (max-width: 600px) {
+  .presspage {
+    width: 100%;
+    padding: 100px 1rem 1rem 1rem;
+    
+    .sec-1 {
+
+      h1 {
+        font-size: 23px;
+          font-family: Futura;
+          font-weight: bold;
+          line-height: 31px;  
+      }
+
+      .subtitle {
+        display: block;
+
+        h5 {
+          font-size: 14px;
+          font-family: Heiti SC;
+          font-weight: 300;
+          line-height: 17px;
+          color: #B7B7B7;
+          padding: 30px 0;
+        }
+
+        ul {
+          li {
+            display: inline-block;
+            margin: 0 20px 0 0;
+            img {
+              height: 17px;
+              width: auto;
+              object-fit: contain;
+            }
+          }
+        }
+
+      }
+      p {
+        margin: 2rem 0  ;
+        font-size: 16px;
+        font-family: Heiti SC;
+        font-weight: 300;
+        line-height: 28px;
+        color: #333333;
+      }
+
+      .pic {
+        display: block;
+        height: auto;
+
+        img {
+          object-fit: cover;
+        }
+
+        img:nth-child(1) {
+          width: 100%;
+          margin-right: 2rem;
+        }
+        img:nth-child(2) {
+          width: 100%;
+        }
+      }
+    }
+
+    .sec-3 {    
+      padding-top: 2rem;
+  
+      .title {
+        position: relative;
+        text-align: left;
+        font-size: 28px;
+        font-family: Futura;
+        font-weight: bold;
+        line-height: 37px;
+      }
+  
+      ul {
+        display: block;
+      
+        width: 100%;
+        max-width: initial;
+        margin: 0;
+        gap: 5rem;
+
+        a:nth-child(4) {
+          display: none;
+        }
+  
+        li {
+          display: grid;
+          grid-template-areas: 'b a'
+                               'c a';
+          padding: 17px 0;
+          border-bottom: 1px solid rgba(#707070, 0.12);
+          
+          img {
+            grid-area: a;
+            width: 130px;
+            height: 99px;
+            border: none;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-left: 19px;
+          }
+  
+          h2 {
+            grid-area: b;
+            -webkit-line-clamp: 3; // 用来限制在一个块元素显示的文本的行数
+            display: -webkit-box; // 将对象作为弹性伸缩盒模型显示
+            -webkit-box-orient: vertical; //设置或检查伸缩盒对象的子元素的排列方式
+            text-overflow: ellipsis; // 在多行文本的情况下，用...隐藏超出范围的文本
+            word-break: break-all;
+            overflow: hidden;
+            font-size: 18px;
+            font-family: Cardiff;
+            font-weight: 400;
+            line-height: 24px;
+            color: #333333;
+            height: 70px;
+          }
+  
+          div {
+            grid-area: c;
+            padding-top: 0;
+            margin-top: 0;
+            border-top: none;
+            font-size: 14px;
+            font-family: Heiti SC;
+            font-weight: 300;
+            line-height: 17px;
+            color: #B7B7B7;
+  
+            h5 {
+              font-size: 14px;
+              font-weight: inherit;
+            }
+  
+            span {
+              flex: 1;
+              text-align: right;
+            }
+          }
+        }
+      }
+  
+    }
+  
+    .arrows {
+      display: none;
+    }
+
+  }
+}
