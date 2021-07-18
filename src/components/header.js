@@ -22,12 +22,12 @@ const lan = {
 
 export default function Header () {
   const [{language} , dispatch] = useContext(ThemeContext);
-  console.log({language})
+  // console.log({language})
 
   const {pathname} = useLocation();
   const miniNav = useRef(null);
   const otherLanguage = useRef(null);
-  const [currentLanguage, setCurrentLanguage] = useState(false);
+  const [currentLanguage, setCurrentLanguage] = useState(language === 'zh');
 
   const onMiniMenuClick = () => {
     miniNav.current.classList.toggle('show');
@@ -45,6 +45,7 @@ export default function Header () {
   const changeLanguage = () => {
     dispatch({ type: TOGGLE })
     setCurrentLanguage(!currentLanguage);
+    localStorage.setItem('lang', !currentLanguage?'zh':'en')
     miniNav.current.classList.remove('show')  
   }
 

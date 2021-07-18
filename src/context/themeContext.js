@@ -23,7 +23,7 @@ const reducer = (state, action) => {
 }
 
 const defaultStore = {
-  language: 'en', 
+  language: localStorage.getItem('lang') || 'en', 
 }
 
 export const ThemeProvider = ({children}) => {
