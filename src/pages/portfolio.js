@@ -70,10 +70,14 @@ export default function Portfolio () {
 
   useEffect(() => {
     const tag = window.location.hash;
-    if (!tag) return;
-    const div = document.querySelector(`${tag}`)
-    const offset = div.getBoundingClientRect();
-    window.scrollTo(0, offset.top);
+    if (tag) {
+      const div = document.querySelector(`${tag}`)
+      const offset = div.getBoundingClientRect();
+      window.scrollTo(0, offset.top);
+    } else {
+      window.scrollTo(0, 0);
+    }
+
   }, [])
 
   return (

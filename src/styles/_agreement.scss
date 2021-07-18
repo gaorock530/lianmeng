@@ -71,8 +71,58 @@
 @media screen and (max-width: 600px) { 
   .agreementpage{
 
+    padding: 4rem 0 2rem 0;
+
     .page {
       display: none;
+    }
+
+    h1 {
+      padding-top: 1rem;
+      font-size: 28px;
+      font-family: Futura;
+      font-weight: bold;
+      line-height: 37px;
+    }
+
+    h5 {
+      font-size: 14px;
+      font-family: Heiti SC;
+      font-weight: 300;
+      line-height: 17px;
+      color: #B7B7B7;
+      padding: 12px 0;
+    }
+
+    p {
+      font-size: 16px;
+      font-family: Heiti SC;
+      font-weight: 300;
+      line-height: 28px;
+      color: #313131;
+    }
+
+    h3 {
+      font-size: 28px;
+      font-family: Futura;
+      font-weight: 500;
+      line-height: 50px;
+      color: #333333;
+      padding: 0;
+    }
+
+    h4 {
+      font-size: 16px;
+      font-family: Heiti SC;
+      font-weight: 300;
+      line-height: 30px;
+      margin:0;
+
+      a {
+        color: #1E4AFF;
+        text-decoration: underline;
+      }
+      
     }
 
   }

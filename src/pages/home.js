@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import {ThemeContext} from '../context/themeContext'
 
 const content = {
@@ -44,6 +44,18 @@ const content = {
 
 export default function Home () {
   const [{language}] = useContext(ThemeContext);
+
+  useEffect(() => {
+    const tag = window.location.hash;
+    if (tag) {
+      const div = document.querySelector(`${tag}`)
+      const offset = div.getBoundingClientRect();
+      window.scrollTo(0, offset.top);
+    } else {
+      window.scrollTo(0, 0);
+    }
+
+  }, [])
 
   return (
     <div className="homepage">
