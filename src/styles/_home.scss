@@ -179,14 +179,6 @@
         }
       }
     }
-
-    .city-block3 {
-      position: absolute;
-      width: 266px;
-      height: 193px;
-      background: #1E4AFF;
-      top: -96.5px;
-    }
     
   }
 
@@ -225,10 +217,11 @@
 
         p {
           position: absolute;
+          left: 0;
           bottom: 0;
-          margin: 0.5rem 2rem;
-          width: 80%;
-          height: 70px;
+          padding: 0.5rem 2rem;
+          width: 100%;
+          height: auto;
           font-size: 16px;
           font-family: DINlight;
           font-weight: 300;
@@ -238,11 +231,11 @@
           // -webkit-line-clamp: 2; 
 
 
-          &:before {
-            content: 'DFG';
-            font-size: 30px;
-            font-family: DINbold;
-          }
+          // &:before {
+          //   content: 'DFG';
+          //   font-size: 30px;
+          //   font-family: DINbold;
+          // }
         }
       }
 

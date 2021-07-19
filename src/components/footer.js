@@ -39,7 +39,7 @@ export default function Footer () {
         <div className="grid">
           <div className="top-layer">
             <div className="bot-share">
-              <img src="/images/DFGwhite-01.png" alt="" className="logo" />
+              <img src="/images/DFGwhite-02.png" alt="" className="logo" />
               <a href="https://twitter.com/DFG_OfficiaI" referrerPolicy="no-referrer" target="_blink" ><img src="/images/home_slices/f-logo1.png" alt="" /></a>
               <a href="https://dfg-official.medium.com/" referrerPolicy="no-referrer" target="_blink" ><img src="/images/home_slices/f-logo2.png" alt="" /></a>
               <a href="https://www.youtube.com/channel/UCaLymWUyQS7l3yUH1c-D-tA" referrerPolicy="no-referrer" target="_blink" ><img src="/images/home_slices/f-logo3.png" alt="" /></a>
@@ -51,7 +51,7 @@ export default function Footer () {
                 <li><Link to="/about">{content.h1.l1[language]}</Link></li>
                 <li><a href="/about#s1">{content.h1.l2[language]}</a></li>
                 <li><a href="/about#s2">{content.h1.l3[language]}</a></li>
-                <li><a href="/about#s2">{content.h1.l4[language]}</a></li>
+                {/* <li><a href="/about#s2">{content.h1.l4[language]}</a></li> */}
               </ul>
               <ul>
                 <h4><Link to="/portfolio">{content.h2.title[language]}</Link></h4>

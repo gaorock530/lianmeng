@@ -42,24 +42,24 @@ const content = {
       zh: 'Terry在新兴市场、技术和企业管理方面拥有20多年经验。他是前海开源基金的独立董事以及LedgerX的董事。Terry也是哥伦比亚大学国际和公共事务学院的高级顾问，以及数字商会的执行委员会成员。他曾接受彭博电台、福布斯、雅虎金融、FX Street、CoinDesk等媒体报道。'
     }
   },
-  s5: {
-    title1: {en: 'Joanna Liang', zh: 'Joanna Liang'},
-    title2: {en: 'Head of Investment', zh: '投资总监'},
+  // s5: {
+  //   title1: {en: 'Joanna Liang', zh: 'Joanna Liang'},
+  //   title2: {en: 'Head of Investment', zh: '投资总监'},
     
-    p1: {
-      en: 'Joanna has been involved in blockchain technology and digital assets investment for the past five years. She manages DFG’s crypto fund, borrowing and lending business, as well as liquidity mining. In 2020, she was part of the launch of the Polkadot Ecosystem Fund with a $20 million AUM. Prior to DFG, Joanna worked at Huobi and Nike.',
-      zh: 'Joanna拥有丰富的区块链和数字资产投资经验。她管理DFG的数字货币基金、借贷以及流动性挖矿业务。在2020年，她主导成立了2000万美元的Polkadot生态基金。在DFG之前，Joanna曾在火币和Nike工作。'
-    }
-  },
-  s6: {
-    title1: {en: 'Grace Gui', zh: 'Grace Gui'},
-    title2: {en: 'Head of Marketing & BD', zh: '市场商务总监'},
+  //   p1: {
+  //     en: 'Joanna has been involved in blockchain technology and digital assets investment for the past five years. She manages DFG’s crypto fund, borrowing and lending business, as well as liquidity mining. In 2020, she was part of the launch of the Polkadot Ecosystem Fund with a $20 million AUM. Prior to DFG, Joanna worked at Huobi and Nike.',
+  //     zh: 'Joanna拥有丰富的区块链和数字资产投资经验。她管理DFG的数字货币基金、借贷以及流动性挖矿业务。在2020年，她主导成立了2000万美元的Polkadot生态基金。在DFG之前，Joanna曾在火币和Nike工作。'
+  //   }
+  // },
+  // s6: {
+  //   title1: {en: 'Grace Gui', zh: 'Grace Gui'},
+  //   title2: {en: 'Head of Marketing & BD', zh: '市场商务总监'},
     
-    p1: {
-      en: 'Grace has about 10 years of experience in solutions, program management, marketing and communities. In the field of blockchain, she has rich experience in overseas event planning and media relations. Before joining DFG, Grace was in charge of global community communications at the Neo Foundation. Her legal education background leads to her in-depth thinking and strong problem-solving skills.',
-      zh: 'Grace在解决方案、项目管理、市场营销和社区方面拥有近10年的工作经验。 在区块链领域，她在海外活动策划和媒体关系方面拥有丰富的经验。 在加入DFG之前，Grace曾在Neo基金会负责全球社区沟通。她的法学教育背景使她具有深入思考和良好的解决问题的能力。'
-    }
-  },
+  //   p1: {
+  //     en: 'Grace has about 10 years of experience in solutions, program management, marketing and communities. In the field of blockchain, she has rich experience in overseas event planning and media relations. Before joining DFG, Grace was in charge of global community communications at the Neo Foundation. Her legal education background leads to her in-depth thinking and strong problem-solving skills.',
+  //     zh: 'Grace在解决方案、项目管理、市场营销和社区方面拥有近10年的工作经验。 在区块链领域，她在海外活动策划和媒体关系方面拥有丰富的经验。 在加入DFG之前，Grace曾在Neo基金会负责全球社区沟通。她的法学教育背景使她具有深入思考和良好的解决问题的能力。'
+  //   }
+  // },
   s7: {
     title1: {en: 'Feng Hano', zh: 'Feng Han'},
     title2: {en: 'Head of Research', zh: '研究总监'},
@@ -155,7 +155,7 @@ export default function About () {
             <p>{content.s4.p1[language]}</p>
           </div>
         </div>
-        <div className="staff">
+        {/* <div className="staff">
           <img src="images/about_slices/29.png" alt="" />
           <div>
             <div className="title">
@@ -174,7 +174,7 @@ export default function About () {
             </div>
             <p>{content.s6.p1[language]}</p>
           </div>
-        </div>
+        </div> */}
         <div className="staff">
           <img src="images/about_slices/11.png" alt="" />
           <div>

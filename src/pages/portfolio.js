@@ -34,7 +34,7 @@ const content = {
     }
   },
   s4: {
-    title: {en: 'CRYPTO FUNDT', zh: '数字货币基金'},
+    title: {en: 'CRYPTO FUND', zh: '数字货币基金'},
     p1: {
       en: 'DFG’s portfolio includes an actively managed trading fund that has earned over 600% in returns, by investing in top-tier solutions at an early stage in a wide variety of blockchain sectors.',
       zh: '数字货币基金是一支主动管理型交易基金，主要在早期阶段投资行业的优质解决方案，已获得超过600%的投资回报。'
@@ -209,10 +209,10 @@ export default function Portfolio () {
         </div>
         <div className="mid">
           <div className="limit logos">
-            <a href={links[0][0]} target="_blink"><img alt="" src="/images/portfolio/11.png" /><div className="more"><h3>{more.logo1.l1.t}</h3><p>{more.logo1.l1[language]}</p></div></a>
-            <a href={links[0][1]} target="_blink"><img alt="" src="/images/portfolio/12.png" /><div className="more"><h3>{more.logo1.l2.t}</h3><p>{more.logo1.l2[language]}</p></div></a>
-            <a href={links[0][2]} target="_blink"><img alt="" src="/images/portfolio/13.png" /><div className="more"><h3>{more.logo1.l3.t}</h3><p>{more.logo1.l3[language]}</p></div></a>
-            <a href={links[0][3]} target="_blink"><img alt="" src="/images/portfolio/14.png" /><div className="more"><h3>{more.logo1.l4.t}</h3><p>{more.logo1.l4[language]}</p></div></a>
+            <li><a href={links[0][0]} target="_blink"><img alt="" src="/images/portfolio/11.png" /><div className="more"><h3>{more.logo1.l1.t}</h3><p>{more.logo1.l1[language]}</p></div></a></li>
+            <li><a href={links[0][1]} target="_blink"><img alt="" src="/images/portfolio/12.png" /><div className="more"><h3>{more.logo1.l2.t}</h3><p>{more.logo1.l2[language]}</p></div></a></li>
+            <li><a href={links[0][2]} target="_blink"><img alt="" src="/images/portfolio/13.png" /><div className="more"><h3>{more.logo1.l3.t}</h3><p>{more.logo1.l3[language]}</p></div></a></li>
+            <li><a href={links[0][3]} target="_blink"><img alt="" src="/images/portfolio/14.png" /><div className="more"><h3>{more.logo1.l4.t}</h3><p>{more.logo1.l4[language]}</p></div></a></li>
           </div>
         </div>
         <div className="limit grid">
@@ -244,16 +244,16 @@ export default function Portfolio () {
         </div>
         <div className="mid">
           <div className="limit logos">
-            <a href={links[5][0]} target="_blink"><img alt="" src="/images/portfolio/61.png" /><div className="more"><h3>{more.logo2.l1.t}</h3><p>{more.logo2.l1[language]}</p></div></a>
-            <a href={links[5][1]} target="_blink"><img alt="" src="/images/portfolio/62.png" /><div className="more"><h3>{more.logo2.l2.t}</h3><p>{more.logo2.l2[language]}</p></div></a>
-            <a href={links[5][2]} target="_blink"><img alt="" src="/images/portfolio/63.png" /><div className="more"><h3>{more.logo2.l3.t}</h3><p>{more.logo2.l3[language]}</p></div></a>
-            <a href={links[5][3]} target="_blink"><img alt="" src="/images/portfolio/64.png" /><div className="more"><h3>{more.logo2.l4.t}</h3><p>{more.logo2.l4[language]}</p></div></a>
+          <li><a href={links[5][0]} target="_blink"><img alt="" src="/images/portfolio/61.png" /><div className="more"><h3>{more.logo2.l1.t}</h3><p>{more.logo2.l1[language]}</p></div></a></li>
+          <li><a href={links[5][1]} target="_blink"><img alt="" src="/images/portfolio/62.png" /><div className="more"><h3>{more.logo2.l2.t}</h3><p>{more.logo2.l2[language]}</p></div></a></li>
+          <li><a href={links[5][2]} target="_blink"><img alt="" src="/images/portfolio/63.png" /><div className="more"><h3>{more.logo2.l3.t}</h3><p>{more.logo2.l3[language]}</p></div></a></li>
+          <li><a href={links[5][3]} target="_blink"><img alt="" src="/images/portfolio/64.png" /><div className="more"><h3>{more.logo2.l4.t}</h3><p>{more.logo2.l4[language]}</p></div></a></li>
           </div>
           <div className="limit logos">
-            <a href={links[6][0]} target="_blink"><img alt="" src="/images/portfolio/71.png" /><div className="more"><h3>{more.logo2.l5.t}</h3><p>{more.logo2.l5[language]}</p></div></a>
-            <a href={links[6][1]} target="_blink"><img alt="" src="/images/portfolio/72.png" /><div className="more"><h3>{more.logo2.l6.t}</h3><p>{more.logo2.l6[language]}</p></div></a>
-            <a href={links[6][2]} target="_blink"><img alt="" src="/images/portfolio/73.png" /><div className="more"><h3>{more.logo2.l7.t}</h3><p>{more.logo2.l7[language]}</p></div></a>
-            <a href={links[6][3]} target="_blink"><img alt="" src="/images/portfolio/74.png" /><div className="more"><h3>{more.logo2.l8.t}</h3><p>{more.logo2.l8[language]}</p></div></a>
+          <li><a href={links[6][0]} target="_blink"><img alt="" src="/images/portfolio/71.png" /><div className="more"><h3>{more.logo2.l5.t}</h3><p>{more.logo2.l5[language]}</p></div></a></li>
+          <li><a href={links[6][1]} target="_blink"><img alt="" src="/images/portfolio/72.png" /><div className="more"><h3>{more.logo2.l6.t}</h3><p>{more.logo2.l6[language]}</p></div></a></li>
+          <li><a href={links[6][2]} target="_blink"><img alt="" src="/images/portfolio/73.png" /><div className="more"><h3>{more.logo2.l7.t}</h3><p>{more.logo2.l7[language]}</p></div></a></li>
+          <li><a href={links[6][3]} target="_blink"><img alt="" src="/images/portfolio/74.png" /><div className="more"><h3>{more.logo2.l8.t}</h3><p>{more.logo2.l8[language]}</p></div></a></li>
           </div>
         </div>
         <div className="limit grid">
@@ -287,16 +287,16 @@ export default function Portfolio () {
         </div>
         <div className="mid">
           <div className="limit logos">
-            <a href={links[11][0]} target="_blink"><img alt="" src="/images/portfolio/121.png" /><div className="more"><h3>{more.logo3.l1.t}</h3><p>{more.logo3.l1[language]}</p></div></a>
-            <a href={links[11][1]} target="_blink"><img alt="" src="/images/portfolio/122.png" /><div className="more"><h3>{more.logo3.l2.t}</h3><p>{more.logo3.l2[language]}</p></div></a>
-            <a href={links[11][2]} target="_blink"><img alt="" src="/images/portfolio/123.png" /><div className="more"><h3>{more.logo3.l3.t}</h3><p>{more.logo3.l3[language]}</p></div></a>
-            <a href={links[11][3]} target="_blink"><img alt="" src="/images/portfolio/124.png" /><div className="more"><h3>{more.logo3.l4.t}</h3><p>{more.logo3.l4[language]}</p></div></a>
+          <li><a href={links[11][0]} target="_blink"><img alt="" src="/images/portfolio/121.png" /><div className="more"><h3>{more.logo3.l1.t}</h3><p>{more.logo3.l1[language]}</p></div></a></li>
+          <li><a href={links[11][1]} target="_blink"><img alt="" src="/images/portfolio/122.png" /><div className="more"><h3>{more.logo3.l2.t}</h3><p>{more.logo3.l2[language]}</p></div></a></li>
+          <li><a href={links[11][2]} target="_blink"><img alt="" src="/images/portfolio/123.png" /><div className="more"><h3>{more.logo3.l3.t}</h3><p>{more.logo3.l3[language]}</p></div></a></li>
+          <li><a href={links[11][3]} target="_blink"><img alt="" src="/images/portfolio/124.png" /><div className="more"><h3>{more.logo3.l4.t}</h3><p>{more.logo3.l4[language]}</p></div></a></li>
           </div>
           <div className="limit logos">
-            <a href={links[12][0]} target="_blink"><img alt="" src="/images/portfolio/131.png" /><div className="more"><h3>{more.logo3.l5.t}</h3><p>{more.logo3.l5[language]}</p></div></a>
-            <a href={links[12][1]} target="_blink"><img alt="" src="/images/portfolio/132.png" /><div className="more"><h3>{more.logo3.l6.t}</h3><p>{more.logo3.l6[language]}</p></div></a>
-            <a href={links[12][2]} target="_blink"><img alt="" src="/images/portfolio/133.png" /><div className="more"><h3>{more.logo3.l7.t}</h3><p>{more.logo3.l7[language]}</p></div></a>
-            <a href={links[12][3]} target="_blink"><img alt="" src="/images/portfolio/134.png" /><div className="more"><h3>{more.logo3.l8.t}</h3><p>{more.logo3.l8[language]}</p></div></a>
+          <li><a href={links[12][0]} target="_blink"><img alt="" src="/images/portfolio/131.png" /><div className="more"><h3>{more.logo3.l5.t}</h3><p>{more.logo3.l5[language]}</p></div></a></li>
+          <li><a href={links[12][1]} target="_blink"><img alt="" src="/images/portfolio/132.png" /><div className="more"><h3>{more.logo3.l6.t}</h3><p>{more.logo3.l6[language]}</p></div></a></li>
+          <li><a href={links[12][2]} target="_blink"><img alt="" src="/images/portfolio/133.png" /><div className="more"><h3>{more.logo3.l7.t}</h3><p>{more.logo3.l7[language]}</p></div></a></li>
+          <li><a href={links[12][3]} target="_blink"><img alt="" src="/images/portfolio/134.png" /><div className="more"><h3>{more.logo3.l8.t}</h3><p>{more.logo3.l8[language]}</p></div></a></li>
           </div>
         </div>
         <div className="limit grid">

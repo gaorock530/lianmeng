@@ -257,22 +257,32 @@
 
       .logos {
 
-        a:hover {
+        li:hover {
           position: absolute;
+          background-color: #fff;
           left: 0;
           top: 0;
           width: 100%;
           height: 100%;
-          background-color: #fff;
           display: flex;
           align-items: center;
-          padding: 0 3rem;
-        
-          .more {
-            display: block;
-            flex: 1;
+          justify-content: center;
+
+          a {
+            position: relative;
+            width: 100%;
+            max-width: 1456px;
+            display: flex;
+            align-items: center;
+          
+            .more {
+              display: block;
+              flex: 1;
+            }
           }
         }
+
+        
       }
     }
   }

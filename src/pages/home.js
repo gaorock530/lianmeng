@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import {ThemeContext} from '../context/themeContext'
 
 const content = {
@@ -42,8 +42,21 @@ const content = {
   }
 }
 
+const baseURL = 'https://api.dfg.group/v1/article/pageCmsArticle?pageNumber=';
+
+async function request(lan, cate, page, size = 3) {
+  const url = `${baseURL}${page}&pageSize=${size}&lang=${lan}_${cate}`
+  console.log(url)
+  return await (await fetch(url)).json()
+}
+
+
 export default function Home () {
   const [{language}] = useContext(ThemeContext);
+
+  const [club, setClub] = useState(null); // 1 club
+  const [blog, setBlog] = useState(null); // 1 blog
+  const [press, setPress] = useState([]); // 3 press
 
   useEffect(() => {
     const tag = window.location.hash;
@@ -54,8 +67,28 @@ export default function Home () {
     } else {
       window.scrollTo(0, 0);
     }
-
   }, [])
+
+  useEffect(() => {
+    request(language, 'club', 1, 1).then(res => {
+      const {records} = res.data;
+      if (records && records.length > 0) {
+        setClub(records[0]);
+      }
+    }).catch(e => console.warn(e))
+    request(language, 'blog', 1, 1).then(res => {
+      const {records} = res.data;
+      if (records && records.length > 0) {
+        setBlog(records[0]);
+      }
+    }).catch(e => console.warn(e))
+    request(language, 'press', 1, 3).then(res => {
+      const {records} = res.data;
+      if (records && records.length > 0) {
+        setPress(records);
+      }
+    }).catch(e => console.warn(e))
+  }, [language])
 
   return (
     <div className="homepage">
@@ -106,33 +139,23 @@ export default function Home () {
         <div className="blocks">
           <div className="b1">
             <img src="images\home_slices\b2.png" alt="" />
-            <p>
-                   established a 20 million Polkadot Ecological Fund in 2020, which market value has now exceeded $500 million.Because we agree with Polkadot's design philosophy and work together to solve problems that affect technology scenarios in different industries. DFG has a heavy position in Polkadot and will hold it for a long time.
-            </p>
+            <p>{club?club.title:''}</p>
           </div>
           <div className="b2">
             <img src="images\home_slices\b3.png" alt="" />
-            <p>
-                   established a 20 million Polkadot Ecological Fund in 2020, which market value has now exceeded $500 million.Because we agree with Polkadot's design philosophy and work together to solve problems that affect technology scenarios in different industries. DFG has a heavy position in Polkadot and will hold it for a long time.
-            </p>
+            <p>{press[0]?press[0].title:''}</p>
           </div>
           <div className="b3">
             <img src="images\home_slices\b4.png" alt="" />
-            <p>
-                   established a 20 million Polkadot Ecological Fund in 2020, which market value has now exceeded $500 million.Because we agree with Polkadot's design philosophy and work together to solve problems that affect technology scenarios in different industries. DFG has a heavy position in Polkadot and will hold it for a long time.
-            </p>
+            <p>{press[1]?press[1].title:''}</p>
           </div>
           <div className="b4">
             <img src="images\home_slices\b5.png" alt="" />
-            <p>
-                   established a 20 million Polkadot Ecological Fund in 2020, which market value has now exceeded $500 million.Because we agree with Polkadot's design philosophy and work together to solve problems that affect technology scenarios in different industries. DFG has a heavy position in Polkadot and will hold it for a long time.
-            </p>
+            <p>{blog?blog.title:''}</p>
           </div>
           <div className="b5">
             <img src="images\home_slices\b6.png" alt="" />
-            <p>
-                   established a 20 million Polkadot Ecological Fund in 2020, which market value has now exceeded $500 million.Because we agree with Polkadot's design philosophy and work together to solve problems that affect technology scenarios in different industries. DFG has a heavy position in Polkadot and will hold it for a long time.
-            </p>
+            <p>{press[2]?press[2].title:''}</p>
           </div>
         </div>
       </section>
