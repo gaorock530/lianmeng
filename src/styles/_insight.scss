@@ -15,6 +15,12 @@
   .sec-1 {
     position: relative;
     user-select: none;
+    margin: 0 auto;
+    max-width: 1680px;
+
+    img {
+      width: 100%;
+    }
 
     ul {
       position: absolute;
@@ -174,7 +180,8 @@
 
     ul {
       position: relative;
-      width: 1653px;
+      max-width: 1653px;
+      width: 100%;
       margin: 0 auto;
 
       li {
@@ -187,6 +194,7 @@
         img {
           width: 915px;
           height: 100%;
+          object-fit: cover;
         }
 
         div {
@@ -226,6 +234,35 @@
       }
     }
   }
+}
+
+@media screen and (max-width: 1640px) { 
+
+  .insightpage .sec-4 ul  {
+    width: 100%;
+
+    li div p {
+      font-size: 30px;
+    }
+  }
+
+}
+
+
+@media screen and (max-width: 1440px) { 
+  .insightpage .sec-3 ul li {
+    width: 100%;
+  }
+
+  .insightpage .sec-4 ul  {
+    width: 100%;
+
+    li img {
+      width: 50%;
+    }
+  }
+
+
 }
 
 @media screen and (max-width: 600px) {

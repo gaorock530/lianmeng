@@ -132,6 +132,24 @@ header {
 
 }
 
+@media screen and (max-width: 1440px) { 
+
+  header {
+    .logo {
+      width: 150px;
+    }
+    nav {
+      font-size: 20px;
+
+      li a {
+        padding: 0 2rem;
+      }
+    }
+  }
+
+}
+
+
 @media screen and (max-width: 600px) {
   header {
     position: fixed;

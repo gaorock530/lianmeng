@@ -1,10 +1,33 @@
 import {Link} from 'react-router-dom';
-import { useEffect } from 'react';
+import {ThemeContext} from '../context/themeContext'
+import { useEffect, useContext, useState, useRef } from 'react';
+
+
+const baseURL = 'https://api.dfg.group/v1/article/pageCmsArticle?pageNumber=';
+
+async function request(lan, cate, page, size = 3) {
+  const url = `${baseURL}${page}&pageSize=${size}&lang=${lan}_${cate}`
+  console.log(url)
+  return await (await fetch(url)).json()
+}
+
+function parseDate (timestamp) {
+  const date = new Date(timestamp);
+  const string = date.toDateString().split(' ');
+  const year = string[3];
+  const day = string[2];
+  const month = string[1];
+  return `${month} ${day}, ${year}`
+}
 
 export default function Press () {
 
+  const [{language}] = useContext(ThemeContext);
   const title = encodeURI("DFG’s Exclusive $20 Million Polkadot Fund");
   const url = encodeURI(window.location);
+  const [pressPage, setPressPage] = useState({pages: 1, current: 1});
+  const [press, setPress] = useState([]);
+  const loading = useRef(false)
 
   const add = () => {
     if (window.sidebar && window.sidebar.addPanel) { // Mozilla Firefox Bookmark
@@ -18,11 +41,80 @@ export default function Press () {
       alert('Press ' + (navigator.userAgent.toLowerCase().indexOf('mac') !== -1 ? 'Command/Cmd' : 'CTRL') + ' + D to bookmark this page.');
     }
   }
+
+  const renderPress = () => press.map(p => (
+    <Link to={`/press/${p.id}`} key={p.id}>
+      <li>
+        <img alt="" src={p.titlePic || '/images/insight_slices/1.png'} />
+        <h2>{p.title}</h2>
+        <div>
+          <h5>By {p.createPer}</h5>
+          <span>{parseDate(p.releaseTime)}</span>
+        </div>
+      </li>
+    </Link>
+  ))
   
 
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+
+  useEffect(() => {
+    request(language, 'press', 1, 4).then(res => {
+      const {records, pages, current} = res.data;
+      setPress(records)
+      setPressPage({pages, current})
+    }).catch(e => console.warn(e))
+  }, [language])
+
+
+
+  const Arrows = () => {
+
+    const {pages, current} = pressPage;
+
+    const leftActive = current > 1;
+    const rightActive = current < pages;
+
+    const onClickPrev = () => {
+      if (!leftActive || loading.current) return;
+      loading.current = true;
+      request(language, 'press', current-1, 4).then(res => {
+        const {records, pages, current} = res.data;
+        loading.current = false
+        setPress(records);
+        setPressPage({pages, current})
+
+      }).catch(e => console.warn(e))
+    }
+
+    const onClickNext = () => {
+      if (!rightActive || loading.current) return;
+      loading.current = true;
+
+      request(language, 'press', current+1, 4).then(res => {
+        const {records, pages, current} = res.data;
+        loading.current = false
+        setPress(records);
+        setPressPage({pages, current})
+
+      }).catch(e => console.warn(e))
+    }
+
+
+    return (
+      <div className="arrows">
+        <svg onClick={onClickPrev} xmlns="http://www.w3.org/2000/svg" width="31.824" height="54.116" viewBox="0 0 31.824 54.116">
+          <path fill={leftActive?"#1e4aff":"#ccc"} d="M478.057,389.257l-22.265-22.264a4.831,4.831,0,0,1,0-6.766l22.265-22.264c4.366-4.367,11.132,2.4,6.766,6.766l-22.264,22.264v-6.766l22.265,22.264C489.19,386.858,482.424,393.623,478.057,389.257Z" transform="translate(-454.41 -336.552)"/>
+        </svg>
+        <svg onClick={onClickNext}  xmlns="http://www.w3.org/2000/svg" width="31.824" height="54.116" viewBox="0 0 31.824 54.116">
+          <path fill={rightActive?"#1e4aff":"#ccc"} d="M462.587,389.257l22.265-22.264a4.831,4.831,0,0,0,0-6.766l-22.265-22.264c-4.366-4.367-11.132,2.4-6.766,6.766l22.264,22.264v-6.766l-22.265,22.264C451.455,386.858,458.22,393.623,462.587,389.257Z" transform="translate(-454.41 -336.552)"/>
+        </svg>
+      </div>
+    )
+  }
+
   
   return (
     <div className="presspage">
@@ -49,53 +141,10 @@ export default function Press () {
 
       </section>
       <section className="sec-3">
-        <div className="title">PRESS</div>
         <ul>
-          <Link to="/press/1">
-          <li>
-            <img alt="" src="/images/insight_slices/1.png" />
-            <h2>Announcement: DFG’s Exclusive $20 Million Polkadot Fund</h2>
-            <div>
-              <h5>By XXXX</h5>
-              <span>Feb 09, 2021</span>
-            </div>
-          </li>
-          </Link>
-          <Link to="/press/2">
-          <li>
-            <img alt="" src="/images/insight_slices/1.png" />
-            <h2>Announcement: DFG’s Exclusive $20 Million Polkadot Fund</h2>
-            <div>
-              <h5>By XXXX</h5>
-              <span>Feb 09, 2021</span>
-            </div>
-          </li>
-          </Link>
-          <Link to="/press/3">
-          <li>
-            <img alt="" src="/images/insight_slices/1.png" />
-            <h2>Announcement: DFG’s Exclusive $20 Million Polkadot Fund</h2>
-            <div>
-              <h5>By XXXX</h5>
-              <span>Feb 09, 2021</span>
-            </div>
-          </li>
-          </Link>
-          <Link to="/press/4">
-          <li>
-            <img alt="" src="/images/insight_slices/1.png" />
-            <h2>Announcement: DFG’s Exclusive $20 Million Polkadot Fund</h2>
-            <div>
-              <h5>By XXXX</h5>
-              <span>Feb 09, 2021</span>
-            </div>
-          </li>
-          </Link>
+          {renderPress()}
         </ul>
-        <div className="arrows">
-          <img src="/images/insight_slices/3558.png" alt="" />
-          <img src="/images/insight_slices/3559.png" alt="" />
-        </div>
+        <Arrows />
       </section>
     </div>  
   )

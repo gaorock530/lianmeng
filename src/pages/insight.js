@@ -74,7 +74,7 @@ export default function Insight () {
   ))
 
   const renderPress = () => press.map(p => (
-    <Link to={`/blog/${p.id}`} key={p.id}>
+    <Link to={`/press/${p.id}`} key={p.id}>
       <li>
         <img alt="" src={p.titlePic || 'images/insight_slices/1.png'} />
         <h2>{p.title}</h2>

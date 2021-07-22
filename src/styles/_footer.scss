@@ -141,6 +141,12 @@ footer {
   }
 }
 
+@media screen and (max-width: 1300px) {
+  footer .top-layer {
+    padding-bottom: 15rem;
+  }
+}
+
 
 @media screen and (max-width: 600px) {
   footer {

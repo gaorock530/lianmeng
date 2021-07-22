@@ -1,6 +1,7 @@
 .blogpage {
-  padding: 250px 0;
-  width: 1660px;
+  padding: 250px 1rem;
+  max-width: 1660px;
+  width: 100%;
   margin: 0 auto;
 
   .phone, .share {
@@ -35,6 +36,10 @@
     color: #333333;
   }
 }
+
+
+
+
 
 @media screen and (max-width: 600px) {
 

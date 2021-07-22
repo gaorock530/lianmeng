@@ -28,10 +28,10 @@ export default function Agreement () {
       <h3>Contact Us</h3>
       <h4>Email: <a href="mailto:contact@dfg.group">contact@dfg.group</a></h4>
 
-      <div className="page">
+      {/* <div className="page">
         <li className="active">1</li>
         <li>2</li>
-      </div>
+      </div> */}
     </div>
   )
 }

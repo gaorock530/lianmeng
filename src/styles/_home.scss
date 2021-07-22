@@ -26,6 +26,8 @@
       color: #122981;
       letter-spacing: 10px;
       text-align: center;
+      z-index: 4;
+
 
       &:before {
         content: '';
@@ -36,6 +38,7 @@
         top: 19rem;
         left: 4.5rem;
         transform: rotate(45DEG);
+        z-index: -1;
       }
     }
   }
@@ -257,6 +260,35 @@
 
     }
   }
+}
+
+@media screen and (max-width: 1440px) { 
+  .homepage { 
+
+    .sec-2 {
+      .who .city-text  {
+        h3 {
+          font-size: 60px;
+        }
+        p {
+          font-size: 24px;
+        }
+      }
+
+      ul li {
+        h4 {
+          font-size: 50px;
+        }
+        p {
+          font-size: 24px;
+        }
+      }
+
+    }
+
+
+  }
+
 }
 
 @media screen and (max-width: 600px) {

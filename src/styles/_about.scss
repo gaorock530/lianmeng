@@ -248,6 +248,18 @@
 
 }
 
+@media screen and (max-width: 1440px) {  
+  .aboutpage .sec-1 .para p {
+    font-size: 22px;
+    padding: 0 0.5rem;
+  }
+
+  .aboutpage .sec-2 .james .content .right p {
+    padding-right: 1rem;
+  }
+
+}
+
 @media screen and (max-width: 600px) { 
   .aboutpage {
     .sec-1 {
@@ -331,10 +343,10 @@
           .pic {
             position: absolute;
             left: -30px;
-            top: -2rem;
+            top: -3.5rem;
             bottom: initial;
             object-fit: contain;
-            width: 80%;
+            width: 300px;
             height: auto;
             z-index: 2;
           }
