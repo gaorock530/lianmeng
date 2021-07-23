@@ -45,7 +45,7 @@ export default function Insight () {
   }, [])
   
   useEffect(() => {
-    request(language, 'club', 1).then(res => {
+    request(language, 'blog', 1).then(res => {
       const {records, pages, current} = res.data;
       console.log(records)
       setBlogs(records);
@@ -56,7 +56,7 @@ export default function Insight () {
       setPress(records)
       setPressPage({pages, current})
     }).catch(e => console.warn(e))
-    request(language, 'blog', 1).then(res => {
+    request(language, 'club', 1).then(res => {
       const {records, pages, current} = res.data;
       setClubs(records)
       setClubPage({pages, current})
