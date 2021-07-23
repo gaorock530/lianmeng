@@ -265,6 +265,24 @@
 
 }
 
+@media screen and (max-width: 1090px) { 
+  .insightpage .sec-1 ul li {
+    padding: 0.5rem 0;
+
+    a {
+      font-size: 40px;
+      line-height: 40px;
+    }
+
+    
+  }
+
+  .insightpage .sec-4 ul li div p {
+    font-size: 20px;
+  }
+
+}
+
 @media screen and (max-width: 600px) {
 
   .insightpage {

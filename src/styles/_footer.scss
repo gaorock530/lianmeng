@@ -69,6 +69,12 @@ footer {
   .bot-contact {
     padding: 0 3rem;
 
+    .email {
+      text-align: right;
+      color: #F3CF34;
+      padding: 0 1rem;
+    }
+
     h3 {
       font-size: 30px;
       font-weight: bold;
@@ -130,6 +136,7 @@ footer {
     display: flex;
     align-items: flex-end;
   }
+
   .bot-rights {
     padding: 2rem 3rem 0 3rem;
     font-size: 24px;

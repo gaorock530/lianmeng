@@ -71,7 +71,7 @@ const content = {
   },
   s8: {
     title1: {en: 'Alejandro Larralde', zh: 'Alejandro Larralde'},
-    title2: {en: 'Overseas Marketing Manager', zh: '海外市场经理'},
+    title2: {en: 'Head of Marketing', zh: '市场总监'},
     
     p1: {
       en: 'Alejandro has 10+ years of experience in sales management and marketing. He has worked in a wide range of industries including real estate, travel, and leisure, international commerce, and blockchain. He currently leads the overseas area for the marketing department and focuses on building DFG’s brand awareness on a global scale through strategic partnerships in regions such as APAC, MENA, Europe, and North America.',

@@ -3,7 +3,7 @@ import {ThemeContext} from '../context/themeContext'
 
 const content = {
   h1: {
-    en: 'An Investment Firm Focused On Empowering Blockchain And Web3.0.',
+    en: 'An Investment Firm Focused On Empowering Blockchain And Web3.0',
     zh: '一家专注于赋能区块链和Web3.0的投资机构'
   },
   h2: {

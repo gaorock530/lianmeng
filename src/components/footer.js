@@ -69,14 +69,15 @@ export default function Footer () {
             </div>
             
           </div>
-          <form className="top-layer bot-contact">
+          <form className="bot-contact">
             <h3>{content.contact.title[language]}</h3>
             <p>{content.contact.text[language]}</p>
-            <input type="mail" name="mail" placeholder="example@email.com"/>
+            <p className="email"><a href="mailto:contact@dfg.group">contact@dfg.group</a></p>
+            {/* <input type="mail" name="mail" placeholder="example@email.com"/>
             <div>
               <span>{content.contact.subs[language]}</span>
               <button>{content.contact.button[language]}</button>
-            </div>
+            </div> */}
           </form>
         </div>
         <div className="grid">
