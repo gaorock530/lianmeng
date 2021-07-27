@@ -88,7 +88,7 @@ export default function Header () {
   return (
     <header>
       <div className="header-wrapper">
-        <img className="logo" src="/images/logo.9ee350c8.png" alt=""/>
+        <img className="logo" src="/images/dfg.png" alt=""/>
         <div className="mini">
           <svg xmlns="http://www.w3.org/2000/svg" width="21.361" height="21.357" viewBox="0 0 21.361 21.357">
             <path id="路径_3566" data-name="路径 3566" fill="#999" d="M20.594,21.357a.763.763,0,0,1-.549-.229l-3.89-3.89-.137.114a9.793,9.793,0,1,1,1.335-1.335l-.114.137,3.89,3.89a.763.763,0,0,1-.534,1.312ZM9.787,1.527a8.237,8.237,0,1,0,8.237,8.229A8.237,8.237,0,0,0,9.787,1.527Z" transform="translate(0 0)"/>

@@ -20,6 +20,7 @@ const Portfolio = lazy(() => import('./pages/portfolio'));
 const Blog = lazy(() => import('./pages/blog'));
 const Press = lazy(() => import('./pages/press'));
 const Agreement = lazy(() => import('./pages/agreement'));
+const Policy = lazy(() => import('./pages/policy'));
 
 
 function App() {
@@ -27,20 +28,27 @@ function App() {
     <ThemeProvider>
       <Router>
         <Header /> 
-        <Switch>
-          <Suspense fallback={<Loading />}>
+        <Suspense fallback={<Loading />}>
+          <Switch>
             
-            <Route path="/about" strict exact><About /></Route>
-            <Route path="/insight" strict exact><Insight /></Route>
-            <Route path="/portfolio" strict exact><Portfolio /></Route>
-            <Route path="/agreement" strict exact><Agreement/></Route>
-            <Route path="/blog/:id" strict><Blog/></Route>
-            <Route path="/press/:id" strict><Press/></Route>
-
             <Route path="/" exact><Home /></Route> 
-          </Suspense>
-          
-        </Switch>
+            <Route path="/about" exact><About /></Route>
+            <Route path="/insight" exact><Insight /></Route>
+            <Route path="/portfolio" exact><Portfolio /></Route>
+            <Route path="/agreement" exact><Agreement/></Route>
+            <Route path="/policy" exact><Policy/></Route>
+
+
+            <Route path="/blog/:lang/:id" strict><Blog/></Route>
+            <Route path="/press/:lang/:id" strict><Press/></Route>
+
+            
+
+            <Route path="*"><div className="notfound">NOT FOUND</div></Route>
+            
+            
+          </Switch>
+        </Suspense>
         <Footer/>
       </Router>
     </ThemeProvider>

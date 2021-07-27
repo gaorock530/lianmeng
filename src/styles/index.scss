@@ -62,18 +62,6 @@ body {
   }
 }
 
-// @media screen and (max-width: 1920px) {
-//   body {
-//     width: 1920px;
-//   }
-// }
-// @media screen and (max-width: 1440px) {
-//   body {
-//     width: 100%;
-//     overflow-x: auto;
-//   }
-// }
-
 
 
 a {
@@ -110,6 +98,11 @@ Common Classes
 
 .none {
   display: none;
+}
+
+.notfound {
+  padding: 30vh 0;
+  text-align: center;
 }
 
 

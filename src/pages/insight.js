@@ -1,6 +1,7 @@
 import { useEffect, useState, useContext, useRef } from 'react';
 import {ThemeContext} from '../context/themeContext'
 import {Link} from 'react-router-dom';
+import parseDate from '../utils/parseDate';
 
 const baseURL = 'https://api.dfg.group/v1/article/pageCmsArticle?pageNumber=';
 
@@ -10,14 +11,6 @@ async function request(lan, cate, page, size = 3) {
   return await (await fetch(url)).json()
 }
 
-function parseDate (timestamp) {
-  const date = new Date(timestamp);
-  const string = date.toDateString().split(' ');
-  const year = string[3];
-  const day = string[2];
-  const month = string[1];
-  return `${month} ${day}, ${year}`
-}
 
 export default function Insight () {
   const [{language}] = useContext(ThemeContext);
@@ -64,7 +57,7 @@ export default function Insight () {
   }, [language])
 
   const renderBlog = () => blogs.map(b => (
-    <Link to={`/blog/${b.id}`} key={b.id}>
+    <Link to={`/blog/${language}/${b.articleNo}`} key={b.id}>
       <li>
         <h4>{parseDate(b.releaseTime)}</h4>
         <h1>{b.title}</h1>
@@ -74,7 +67,7 @@ export default function Insight () {
   ))
 
   const renderPress = () => press.map(p => (
-    <Link to={`/press/${p.id}`} key={p.id}>
+    <Link to={`/press/${language}/${p.articleNo}`} key={p.id}>
       <li>
         <img alt="" src={p.titlePic || 'images/insight_slices/1.png'} />
         <h2>{p.title}</h2>
@@ -120,7 +113,7 @@ export default function Insight () {
     const onClickPrev = () => {
       if (!leftActive || loading.current) return;
       loading.current = true;
-      request(language, cate, current-1, cate === 'press'?4:null).then(res => {
+      request(language, cate, current-1, cate === 'press'?4:3).then(res => {
         const {records, pages, current} = res.data;
         loading.current = false
         switch (cate) {
@@ -149,7 +142,8 @@ export default function Insight () {
       if (!rightActive || loading.current) return;
       loading.current = true;
 
-      request(language, cate, current+1, cate === 'press'?4:null).then(res => {
+      request(language, cate, current+1, cate === 'press'?4:3).then(res => {
+        console.log(res.data)
         const {records, pages, current} = res.data;
         loading.current = false
         switch (cate) {

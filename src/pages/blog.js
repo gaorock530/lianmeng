@@ -1,6 +1,22 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import parseDate from '../utils/parseDate';
+
+
+const baseURL = 'https://api.dfg.group/v1/article/detail?articleNo=';
+
+
+async function request(lan, cate, no) {
+  const url = `${baseURL}${no}&lang=${lan}_${cate}`
+  console.log(url)
+  return await (await fetch(url)).json()
+}
 
 export default function Blog () {
+  const [data, setData] = useState(null);
+  const { lang, id } = useParams();
+  console.log({lang, id})
+
   useEffect(() => {
     if (window.innerWidth<= 600) {
       document.querySelector('header').classList.add('none')
@@ -8,26 +24,30 @@ export default function Blog () {
     }
     window.scrollTo(0, 0);
 
+    request(lang, 'blog', id).then(res => {
+      setData(res.data)
+      console.log(res)
+
+    }).catch(e =>console.warn(e))
+
     return () => {
       document.querySelector('header').classList.remove('none')
       document.querySelector('footer').classList.remove('none')
     }
-  }, [])
+  }, [lang, id])
 
-  return (
+  return data?(
     <div className="blogpage">
       <div className="phone">
         <img alt="" src="/images/logo.9ee350c8.png" />
         <span>| BLOG</span>
       </div>
       <div className="bg">
-        <h5>Effective Date: August 14, 2015</h5>
-        <h1>DFG(数字金融集团)成为 Polkastarter 理事会成员</h1>
-        <h4>Mar 02, 2021</h4>
-        <h4>By: XXX</h4>
-        <p>Some of our services, and certain pages of the DFG Site, are available only to clients or users who have been authorized by us to access those services and web pages. Such authorization may require completion of an accredited investor questionnaire and satisfactory background information screening.</p>
-        <p>Unauthorized use of any DFG Site and/or our systems, including, but not limited to, unauthorized entry into and/or any attempted access of DFG’s systems and/or any restricted areas of any of the DFG Site, misuse or sharing of passwords or misuse of any other information, is strictly prohibited. You may not use any DFG Site in any manner that could damage, disable, overburden, or impair any DFG Site or service or interfere with any other party’s use and enjoyment of any DFG Site or service. You may not attempt to gain unauthorized access to any DFG Site or service, computer systems or networks connected to any DFG Site or service, through hacking, password mining or any other means. You may not screen-scrape, data scrape and/or use any automated means to acquire data and/or information from our Sites. You agree that you will not engage in any activities related to any DFG Site that are contrary to these Terms of Service and/or any applicable laws or regulations. You agree to notify us immediately in the event that you learn or suspect that the security of your password may have been compromised. You further agree that you are responsible for any unauthorized use of your password that is made before you have notified us and we have had a reasonable opportunity to act on that notice. We reserve the right to suspend or cancel your password, even without receiving such notice from you, if we suspect that it is being used in an unauthorized or fraudulent manner.</p>
-        <p>Notwithstanding the above, you are responsible for monitoring your use of the DFG Sites and should promptly report any unauthorized or suspicious activity to us at contact@dfg.group</p>
+        <h5>Effective Date: {parseDate(data.releaseTime)}</h5>
+        <h1>{data.title}</h1>
+        <h4>{parseDate(data.releaseTime)}</h4>
+        <h4>By: {data.createPer}</h4>
+        <div dangerouslySetInnerHTML = {{__html: data.content}}></div>
       </div>
       <div className="share">
         <p>An investment firm 
@@ -36,5 +56,5 @@ blockchain and Web3.0.</p>
         <img src="/images/weichat/qr.png" alt="" />
       </div>
     </div>
-  )
+  ):<div className="loading">loading...</div>
 }

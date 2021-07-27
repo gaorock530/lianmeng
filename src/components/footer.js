@@ -39,7 +39,7 @@ export default function Footer () {
         <div className="grid">
           <div className="top-layer">
             <div className="bot-share">
-              <img src="/images/DFGwhite-02.png" alt="" className="logo" />
+              <img src="/images/DFGwhite-01.png" alt="" className="logo" />
               <a href="https://twitter.com/DFG_OfficiaI" referrerPolicy="no-referrer" target="_blink" ><img src="/images/home_slices/f-logo1.png" alt="" /></a>
               <a href="https://dfg-official.medium.com/" referrerPolicy="no-referrer" target="_blink" ><img src="/images/home_slices/f-logo2.png" alt="" /></a>
               <a href="https://www.youtube.com/channel/UCaLymWUyQS7l3yUH1c-D-tA" referrerPolicy="no-referrer" target="_blink" ><img src="/images/home_slices/f-logo3.png" alt="" /></a>
@@ -81,12 +81,14 @@ export default function Footer () {
           </form>
         </div>
         <div className="grid">
-          <div className="bot-term"><Link to="/agreement">TERMS & CONDITIONS&nbsp;| PRIVACY POLICY</Link></div>
+          <div className="bot-term">
+            <Link to="/agreement">TERMS & CONDITIONS</Link>
+            &nbsp;|&nbsp;
+            <Link to="/policy">PRIVACY POLICY</Link>
+          </div>
           <div className="bot-rights">©2019-2021 DFG. All rights reserved.</div>
         </div>
       </div>
-     
-      
     </footer>
   )
 }
