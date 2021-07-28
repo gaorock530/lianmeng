@@ -1,6 +1,7 @@
 import { useState, useRef, useContext } from 'react';
 import {Link, useLocation} from 'react-router-dom';
-import {ThemeContext, TOGGLE} from '../context/themeContext'
+import {ThemeContext, TOGGLE} from '../context/themeContext';
+import { Helmet } from "react-helmet";
 
 const pages = [
   {path: '/', en: 'Home', zh: '首页'},
@@ -17,6 +18,11 @@ const lan = {
     name: '中文', 
     logo: 'cn.png'
   }
+}
+
+const title = {
+  en: 'An Investment Firm Focusing On Empowering Blockchain & Web 3.0',
+  zh: '一家专注于赋能区块链和Web3.0的投资机构'
 }
 
 
@@ -87,6 +93,9 @@ export default function Header () {
 
   return (
     <header>
+      <Helmet>
+        <title>{title[language]}</title>
+      </Helmet>
       <div className="header-wrapper">
         <img className="logo" src="/images/dfg.png" alt=""/>
         <div className="mini">

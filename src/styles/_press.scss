@@ -121,7 +121,7 @@
           display: -webkit-box; // 将对象作为弹性伸缩盒模型显示
           -webkit-box-orient: vertical; //设置或检查伸缩盒对象的子元素的排列方式
           text-overflow: ellipsis; // 在多行文本的情况下，用...隐藏超出范围的文本
-          word-break: break-all;
+          // word-break: break-all;
           overflow: hidden;
           font-size: 40px;
           font-weight: bold;
@@ -284,7 +284,7 @@
             display: -webkit-box; // 将对象作为弹性伸缩盒模型显示
             -webkit-box-orient: vertical; //设置或检查伸缩盒对象的子元素的排列方式
             text-overflow: ellipsis; // 在多行文本的情况下，用...隐藏超出范围的文本
-            word-break: break-all;
+            // word-break: break-all;
             overflow: hidden;
             font-size: 18px;
             font-family: Cardiff;

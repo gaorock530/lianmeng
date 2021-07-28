@@ -3,6 +3,22 @@ import {ThemeContext} from '../context/themeContext'
 import {Link} from 'react-router-dom';
 import parseDate from '../utils/parseDate';
 
+
+const title = {
+  t1: {
+    en: 'BLOG',
+    zh: '博客'
+  },
+  t2: {
+    en: 'PRESS',
+    zh: '新闻'
+  },
+  t3: {
+    en: 'DFG CLUB',
+    zh: 'DFG CLUB'
+  }
+}
+
 const baseURL = 'https://api.dfg.group/v1/article/pageCmsArticle?pageNumber=';
 
 async function request(lan, cate, page, size = 3) {
@@ -188,20 +204,20 @@ export default function Insight () {
       <section className="sec-1">
         <img src="images/insight_slices/81.png" alt="" />
         <ul>
-          <li className="active"><a href="#blog">BLOG</a></li>
-          <li><a href="#press">PRESS</a></li>
+          <li className="active"><a href="#blog">{title.t1[language]}</a></li>
+          <li><a href="#press">{title.t2[language]}</a></li>
           <li><a href="#club">DFG CLUB</a></li>
         </ul>
       </section>
       <section className="sec-2">
-        <div className="title" id="blog">BLOG</div>
+        <div className="title" id="blog">{title.t1[language]}</div>
         <ul>
           {renderBlog()}          
         </ul>
         <Arrows cate="blog" />
       </section>
       <section className="sec-3">
-        <div className="title" id="press">PRESS</div>
+        <div className="title" id="press">{title.t2[language]}</div>
         <ul>
           {renderPress()}
         </ul>
