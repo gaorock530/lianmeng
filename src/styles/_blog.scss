@@ -113,6 +113,7 @@
       align-items: flex-end;
 
       p {
+        flex:1;
         padding: 0;
         font-size: 14px;
         font-family: Cardiff;
@@ -121,9 +122,9 @@
         color: #333333;
       }
 
-      img {
-        width:75px;
-        height: 75px;
+      img, svg {
+        width: 100px;
+        height: 100px;
         object-fit: contain;
       }
     }

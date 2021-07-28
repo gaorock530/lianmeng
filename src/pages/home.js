@@ -56,7 +56,7 @@ export default function Home () {
 
   const [club, setClub] = useState(null); // 1 club
   const [blog, setBlog] = useState(null); // 1 blog
-  const [press, setPress] = useState([]); // 3 press
+  const [press, setPress] = useState(null); // 3 press
 
   useEffect(() => {
     const tag = window.location.hash;
@@ -74,6 +74,7 @@ export default function Home () {
       const {records} = res.data;
       if (records && records.length > 0) {
         setClub(records[0]);
+        console.log(records[0])
       }
     }).catch(e => console.warn(e))
     request(language, 'blog', 1, 1).then(res => {
@@ -137,26 +138,27 @@ export default function Home () {
       <section className="sec-4">
         <h1 className="constained">{content.h5.title[language]}</h1>
         <div className="blocks">
-          <div className="b1">
+          {club && <a href={`/club/${language}/${club.articleNo}`} className="b1">
             <img src="images\home_slices\b2.png" alt="" />
             <p>{club?club.title:''}</p>
-          </div>
-          <div className="b2">
+          </a>}
+          {press && press[0] && <a href={`/press/${language}/${press[0].articleNo}`} className="b2">
             <img src="images\home_slices\b3.png" alt="" />
             <p>{press[0]?press[0].title:''}</p>
-          </div>
-          <div className="b3">
+          </a>}
+          {press && press[1] && <a href={`/press/${language}/${press[1].articleNo}`} className="b3">
             <img src="images\home_slices\b4.png" alt="" />
             <p>{press[1]?press[1].title:''}</p>
-          </div>
-          <div className="b4">
+          </a>}
+          {blog && <a href={`/blog/${language}/${blog.articleNo}`} className="b4">
             <img src="images\home_slices\b5.png" alt="" />
             <p>{blog?blog.title:''}</p>
-          </div>
-          <div className="b5">
+          </a>}
+          {press && press[2] && <a href={`/press/${language}/${press[2].articleNo}`} className="b5">
             <img src="images\home_slices\b6.png" alt="" />
             <p>{press[2]?press[2].title:''}</p>
-          </div>
+          </a>
+          }
         </div>
       </section>
     </div>

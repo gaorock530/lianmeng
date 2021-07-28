@@ -19,6 +19,7 @@ const Portfolio = lazy(() => import('./pages/portfolio'));
 
 const Blog = lazy(() => import('./pages/blog'));
 const Press = lazy(() => import('./pages/press'));
+const Club = lazy(() => import('./pages/club'));
 const Agreement = lazy(() => import('./pages/agreement'));
 const Policy = lazy(() => import('./pages/policy'));
 
@@ -41,6 +42,7 @@ function App() {
 
             <Route path="/blog/:lang/:id" strict><Blog/></Route>
             <Route path="/press/:lang/:id" strict><Press/></Route>
+            <Route path="/club/:lang/:id" strict><Club/></Route>
 
             
 

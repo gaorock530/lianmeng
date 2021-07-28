@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import parseDate from '../utils/parseDate';
+import QRCode from "react-qr-code";
 
 
 const baseURL = 'https://api.dfg.group/v1/article/detail?articleNo=';
@@ -26,7 +27,7 @@ export default function Blog () {
 
     request(lang, 'blog', id).then(res => {
       setData(res.data)
-      console.log(res)
+      console.log(window.location.href)
 
     }).catch(e =>console.warn(e))
 
@@ -53,7 +54,8 @@ export default function Blog () {
         <p>An investment firm 
 focused on empowering 
 blockchain and Web3.0.</p>
-        <img src="/images/weichat/qr.png" alt="" />
+        <QRCode value={window.location.href} size={100}/>
+        {/* <img src="/images/weichat/qr.png" alt="" /> */}
       </div>
     </div>
   ):<div className="loading">loading...</div>

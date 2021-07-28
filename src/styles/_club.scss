@@ -1,0 +1,76 @@
+.clubpage {
+
+  padding: 250px 1rem;
+  max-width: 1660px;
+  width: 100%;
+  margin: 0 auto;
+
+  h1 {
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 80px;
+    color: #333333;
+  }
+
+  h4 {
+    font-size: 30px;
+    font-family: DINpro;
+    font-weight: 400;
+    line-height: 40px;
+    color: #B7B7B7;
+  }
+
+  h5 {
+    display: none;
+  }
+
+  p {
+    margin: 3rem 0;
+    font-size: 30px;
+    font-family: DINpro;
+    font-weight: 400;
+    line-height: 40px;
+    color: #333333;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+
+  .clubpage {
+    padding: 100px 0;
+    width: 100%;
+
+    h1 {
+      font-size: 21px;
+      font-family: Futura;
+      font-weight: bold;
+      line-height: 28px;
+    }
+
+    h5 {
+      display: block;
+      font-size: 12px;
+      font-family: Heiti SC;
+      font-weight: 300;
+      line-height: 14px;
+      color: #B7B7B7;
+      padding-bottom: 1rem;
+    }
+  
+    h4 {
+      display: none;
+    }
+  
+    p {
+      margin: 0;
+      padding: 1rem 0;
+      font-size: 15px;
+      font-family: Heiti SC;
+      font-weight: 300;
+      line-height: 28px;
+    }
+
+    
+  }
+}
