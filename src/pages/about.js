@@ -140,7 +140,7 @@ export default function About () {
           </div>
         </div>
       </section>
-      <section className="sec-3">
+      <section className="sec-3 constained">
         <div>
           <img src="images/about_slices/CORE TEAM_MEMBERS.png" alt="" className="team"/>
         </div>
@@ -196,7 +196,7 @@ export default function About () {
           </div>
         </div>
       </section>
-      <section className="sec-4" id="s2">
+      <section className="sec-4 constained" id="s2">
         <div className="pic">
           <img src="/images/about/51miz-P1219990-PD72NRJ3-3840x2563.png" alt="" />
         </div>
