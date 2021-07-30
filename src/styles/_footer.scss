@@ -4,7 +4,8 @@ footer {
   background: #122981;
   padding: 3rem;
  
-  font-family: Microsoft YaHei;
+  // font-family: Microsoft YaHei;
+  font-family: futura;
   color: #fff;
 
   .grid {
@@ -29,8 +30,9 @@ footer {
         margin: 0 1rem;
       }
       h4 {
+        font-family: futura_B;
         font-size: 30px;
-        font-weight: bold;
+        font-weight: 300;
         line-height: 40px;
       }
       li {
@@ -76,13 +78,14 @@ footer {
     }
 
     h3 {
+      font-family: futura_B;
       font-size: 30px;
-      font-weight: bold;
+      font-weight: 300;
       padding-bottom: 10px;
     }
+
     p {
       font-size: 24px;
-      font-weight: bold;
       line-height: 50px;
     }
 

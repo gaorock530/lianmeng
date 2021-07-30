@@ -32,6 +32,10 @@ FONTs
   font-family: futura;
   src: url(../fonts/Futura.ttc);
 }
+@font-face {
+  font-family: futura_B;
+  src: url(../fonts/futur_b.ttf);
+}
 
 
 
@@ -42,7 +46,7 @@ FONTs
 }
 
 html {
-  font-family: Microsoft YaHei, 'Helvetica Neue',sans-serif;
+  font-family: Hei, Microsoft YaHei, 'Helvetica Neue',sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #fff;

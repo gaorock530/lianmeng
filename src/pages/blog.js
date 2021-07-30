@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from "react"; // useContext
 import { useParams } from "react-router-dom";
 import parseDate from '../utils/parseDate';
 import QRCode from "react-qr-code";
+// import {ThemeContext} from '../context/themeContext';
 
 
 const baseURL = 'https://api.dfg.group/v1/article/detail?articleNo=';
@@ -14,6 +15,7 @@ async function request(lan, cate, no) {
 }
 
 export default function Blog () {
+  // const [{language}] = useContext(ThemeContext);
   const [data, setData] = useState(null);
   const { lang, id } = useParams();
   console.log({lang, id})

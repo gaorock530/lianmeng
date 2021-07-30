@@ -196,7 +196,7 @@ export default function About () {
           </div>
         </div>
       </section>
-      <section className="constained sec-4" id="s2">
+      <section className="sec-4" id="s2">
         <div className="pic">
           <img src="/images/about/51miz-P1219990-PD72NRJ3-3840x2563.png" alt="" />
         </div>
