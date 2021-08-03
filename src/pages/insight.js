@@ -201,14 +201,14 @@ export default function Insight () {
 
   return (
     <div className="insightpage">
-      <section className="sec-1">
+      {/* <section className="sec-1">
         <img src="images/insight_slices/81.png" alt="" />
         <ul>
           <li className="active"><a href="#blog">{title.t1[language]}</a></li>
           <li><a href="#press">{title.t2[language]}</a></li>
           <li><a href="#club">DFG CLUB</a></li>
         </ul>
-      </section>
+      </section> */}
       <section className="sec-2">
         <div className="title" id="blog">{title.t1[language]}</div>
         <ul>

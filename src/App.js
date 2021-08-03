@@ -14,7 +14,7 @@ import Loading from './components/loading';
 
 const Home = lazy(() => import('./pages/home'));
 const About = lazy(() => import('./pages/about'));
-const Insight = lazy(() => import('./pages/insight'));
+const Insight = lazy(() => import('./pages/insights'));
 const Portfolio = lazy(() => import('./pages/portfolio'));
 
 const Blog = lazy(() => import('./pages/blog'));

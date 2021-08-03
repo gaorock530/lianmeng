@@ -55,7 +55,7 @@ html {
 body {
   position: relative;
   overflow-x: hidden;
-  width: 100vw;
+  width: 100%;
   // margin: 0 auto;
 }
 
@@ -133,3 +133,4 @@ Pages
 @import './blog';
 @import './press';
 @import './club';
+@import './insights';
