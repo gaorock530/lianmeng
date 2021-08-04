@@ -106,6 +106,7 @@ export default function Home () {
             <p>{content.h2.p1[language]}</p>
             <p>{content.h2.p2[language]}</p>
           </div>
+          <div className="line"></div>
           <div>
             <img className="city" src="images/home_slices/city-336708_1920@2x.png" alt=""/>
             <div className="city-bar"></div>
@@ -125,8 +126,8 @@ export default function Home () {
             <p>{content.h3.p3.text[language]}</p>
           </li>
         </ul>
-        
         <img className="edge" src="images/home_slices/OUR EDGE@2x.png" alt="" />
+        <div className="line"></div>
       </section>
       <section className="constained sec-3">
         <div className="content">

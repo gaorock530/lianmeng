@@ -6,6 +6,14 @@
     position: relative;
   }
 
+  .line {
+    display: none;
+    width: calc(100% - 2rem);
+    height: 2px;
+    background-color: #1e4aff;
+    margin: 0 auto;
+  }
+
   .sec-1 {
     height: 1079px;
     width: 100%;
@@ -269,6 +277,10 @@
 @media screen and (max-width: 1440px) { 
   .homepage { 
 
+    .line {
+      display: block;
+    }
+
     .sec-2 {
       .who .city-text  {
         h3 {
@@ -277,6 +289,10 @@
         p {
           font-size: 24px;
         }
+      }
+
+      ul {
+        border: none;
       }
 
       ul li {
@@ -323,11 +339,13 @@
         display: block;
         position: relative;
 
+
+
         .city-text {
-          position: absolute;
+          position: relative;
           background-color: #fff;
-          bottom: 10px;
-          height: 480px;
+          // height: 480px;
+          padding-bottom: 1rem;
   
           h3 {
             font-size: 32px;
@@ -350,6 +368,7 @@
         }
 
         .city-bar {
+          display: none;
           position: relative;
           width: 100%;
           height: 10px;
@@ -358,6 +377,7 @@
         }
   
         .city {
+          display: none;
           width: 100%;
           height: 496px;
           object-fit: cover;
@@ -366,7 +386,7 @@
 
       ul {
         display: block;
-        padding: 3rem 16px;
+        padding: 1rem 16px;
         border-width: 2px;
 
         li {
