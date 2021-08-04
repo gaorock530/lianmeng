@@ -99,7 +99,8 @@ export default function Insight () {
     <li key={b.id}>
       <img alt="" src={b.titlePic || 'images/insight_slices/1.png'} />
       <div className="phone">
-        <h1>0{idx + 1}</h1>
+        {/* <h1>0{idx + 1}</h1> */}
+        <h5>By {b.createPer}</h5>
         <h3>{parseDate(b.releaseTime)}</h3>
         <p>{b.title}</p>
       </div>

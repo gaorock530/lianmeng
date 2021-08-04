@@ -48,6 +48,7 @@
 
     .title {
       position: relative;
+      text-align: center;
       font-size: 100px;
       font-weight: bold;
       line-height: 133px;
@@ -97,7 +98,7 @@
 
     .title {
       position: relative;
-      text-align: right;
+      text-align: center;
       font-size: 100px;
       font-weight: bold;
       line-height: 133px;
@@ -169,6 +170,7 @@
 
     .title {
       // padding-bottom: 10rem;
+      text-align: center;
       font-size: 100px;
       font-weight: bold;
       line-height: 133px;
@@ -210,6 +212,15 @@
             font-weight: 400;
             line-height: 60px;
             color: #333333;
+          }
+
+          h5 {
+            font-size: 14px;
+            // font-family: DINpro;
+            font-family: Heiti SC;
+            font-weight: 400;
+            // line-height: 53px;
+            color: #B7B7B7;
           }
 
           h3 {
@@ -358,7 +369,7 @@
   
       .title {
         position: relative;
-        text-align: right;
+        text-align: center;
         font-size: 28px;
         font-family: Futura;
         font-weight: bold;

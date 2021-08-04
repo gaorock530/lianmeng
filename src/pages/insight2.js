@@ -23,7 +23,7 @@ const baseURL = 'https://api.dfg.group/v1/article/pageCmsArticle?pageNumber=';
 
 async function request(lan, cate, page, size = 3) {
   const url = `${baseURL}${page}&pageSize=${size}&lang=${lan}_${cate}`
-  console.log(url)
+  // console.log(url)
   return await (await fetch(url)).json()
 }
 
@@ -47,7 +47,7 @@ export default function Insights () {
     if (tag) {
       const div = document.querySelector(`${tag}`)
       const offset = div.getBoundingClientRect();
-      console.log('set active')
+      // console.log('set active')
       setActive(tag.slice(1).toLocaleLowerCase())
       window.scrollTo(0, offset.top);
     } else {
@@ -59,19 +59,20 @@ export default function Insights () {
     request(language, 'blog', 1, 4).then(res => {
       const {records, pages, current} = res.data;
       setBlogs(records);
-      setBlogPage({pages, current})
+      // console.log({pages, current})
+      setBlogPage({total: pages, current})
     }).catch(e => console.warn(e))
     request(language, 'press', 1, 6).then(res => {
       const {records, pages, current} = res.data;
       setPress(records)
-      setPressPage({pages, current})
+      setPressPage({total: pages, current})
     }).catch(e => console.warn(e))
     request(language, 'club', 1, 6).then(res => {
       const {records, pages, current} = res.data;
-      console.log(records)
+      // console.log(records)
       if (records.length > 1) setClubsNews(records.slice(0,2));
       if (records.length > 2) setClubsPast(records.slice(2));
-      setClubPage({pages, current})
+      setClubPage({total: pages, current})
     }).catch(e => console.warn(e))
   }, [language])
 
@@ -97,7 +98,7 @@ export default function Insights () {
             </li>
           </Link>)}
         </ul>
-        {blogs.length > 1 && <Page />}
+        {blogs.length > 0 && <Page cate="blog" lan={language} page={blogPage} setPage={setBlogPage} setData={setBlogs}/>}
       </section>
 
       <section className="sec-2" id="press">
@@ -114,7 +115,7 @@ export default function Insights () {
             </li>
           </Link>)}
         </ul>
-        {press.length > 1 && <Page />}
+        {press.length > 0 && <Page cate="press" lan={language} page={pressPage} setPage={setPressPage} setData={setPress} />}
       </section>
 
       <section className="sec-3 small" id="club">
@@ -148,24 +149,69 @@ export default function Insights () {
             </Link>)}
           </ul>
         </>}
-        {clubsPast.length > 1 && <Page />}
+        {clubsPast.length > 0 && <Page cate="club" lan={language} page={clubPage} setPage={setClubPage} setData={setClubsPast} />}
       </section>
     </div>
   )
 }
 
 
-function Page () {
+function Page ({page, setPage, setData, cate, lan}) {
+  const loading = useRef(false)
+  const per = {
+    blog: 4,
+    press: 6,
+  }
+  // console.log({cate, page, setPage, setData})
+  const getNewData = (num) => {
+    if (page.total <= 1) return;
+    if (loading.current) return;
+    if (num <= 0 || num > page.total) return;
+    loading.current = true;
+    request(lan, cate, num, per[cate]).then(res => {
+      loading.current = false;
+      const {records, pages, current} = res.data;
+      setData(records);
+      // console.log({pages, current})
+      setPage({total: pages, current})
+    }).catch(e => console.warn(e))
+  }
+
+  const gotoPrev = () => {
+    const {current} = page;
+    if (current === 1) return;
+    getNewData(current - 1);
+  }
+
+  const gotoNext = () => {
+    const {total, current} = page;
+    if (current >= total) return;
+    getNewData(current + 1);
+  }
+
+  const goto = (e) => {
+    e.preventDefault();
+    var formData = new FormData(e.target)
+    const num = parseInt(formData.get('num'))
+    getNewData(num)
+  
+  }
+
   return (
-    <form className="page">
-      <div className="arrow">&lt;</div>
-      <span className="active">1</span>
-      <span>2</span>
-      <span>3</span>
-      <span>...</span>
-      <span>8</span>
-      <input type="text" />
-      <div className="arrow">&gt;</div>
+    <form className="page" onSubmit={goto} >
+      <div className="arrow" onClick={gotoPrev}>&lt;</div>
+      <PageNumber total={page.total} current={page.current} goto={getNewData} />
+      <input type="text" name="num" />
+      <div className="arrow" onClick={gotoNext}>&gt;</div>
     </form>
   )
+}
+
+function PageNumber ({total, current, goto}) {
+  let html = [];
+  for(let i=0;i<total;i++) {
+    const num = i+1;
+    html.push(num)
+  }
+  return html.map(h => <span key={h} onClick={() => goto(h)} className={current === h?"active":null}>{h}</span>)
 }

@@ -77,18 +77,21 @@ export default function Home () {
         console.log(records[0])
       }
     }).catch(e => console.warn(e))
+
     request(language, 'blog', 1, 1).then(res => {
       const {records} = res.data;
       if (records && records.length > 0) {
         setBlog(records[0]);
       }
     }).catch(e => console.warn(e))
+
     request(language, 'press', 1, 3).then(res => {
       const {records} = res.data;
       if (records && records.length > 0) {
         setPress(records);
       }
     }).catch(e => console.warn(e))
+    
   }, [language])
 
   return (
