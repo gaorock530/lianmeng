@@ -23,7 +23,7 @@ const baseURL = 'https://api.dfg.group/v1/article/pageCmsArticle?pageNumber=';
 
 async function request(lan, cate, page, size = 3) {
   const url = `${baseURL}${page}&pageSize=${size}&lang=${lan}_${cate}`
-  console.log(url)
+  // console.log(url)
   return await (await fetch(url)).json()
 }
 
@@ -56,7 +56,7 @@ export default function Insight () {
   useEffect(() => {
     request(language, 'blog', 1).then(res => {
       const {records, pages, current} = res.data;
-      console.log(records)
+      // console.log(records)
       setBlogs(records);
       setBlogPage({pages, current})
     }).catch(e => console.warn(e))
@@ -160,7 +160,7 @@ export default function Insight () {
       loading.current = true;
 
       request(language, cate, current+1, cate === 'press'?4:3).then(res => {
-        console.log(res.data)
+        // console.log(res.data)
         const {records, pages, current} = res.data;
         loading.current = false
         switch (cate) {
